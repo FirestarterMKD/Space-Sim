@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 494}
   m_MaxSize: {x: 14004, y: 14044}
   vertical: 0
-  controlID: 11451
+  controlID: 422
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -61,9 +61,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -7.5303044, y: 0.044498537, z: 310.65744}
+    m_Target: {x: -0.12859337, y: 29.61622, z: 1061.4746}
     speed: 2
-    m_Value: {x: -7.5303044, y: 0.044498537, z: 310.65744}
+    m_Value: {x: -0.12859337, y: 29.61622, z: 1061.4746}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -84,21 +84,21 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
     yGrid:
-      m_Target: 1
+      m_Target: 0
       speed: 2
-      m_Value: 1
+      m_Value: 0
     zGrid:
       m_Target: 0
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.0054753036, y: 0.9638998, z: -0.021205792, w: 0.26538244}
+    m_Target: {x: 0.012690922, y: -0.2065403, z: 0.0023385189, w: 0.9783744}
     speed: 2
-    m_Value: {x: 0.0053479434, y: 0.9654698, z: -0.021238154, w: 0.25959295}
+    m_Value: {x: 0.012717803, y: -0.19478114, z: 0.002186017, w: 0.9807618}
   m_Size:
-    m_Target: 1.8582036
+    m_Target: 1.1122862
     speed: 2
-    m_Value: 1.8763746
+    m_Value: 1.1158168
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -148,7 +148,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 494}
   m_MaxSize: {x: 10002, y: 14044}
   vertical: 1
-  controlID: 11452
+  controlID: 423
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -173,7 +173,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 222}
   m_MaxSize: {x: 8006, y: 4022}
   vertical: 0
-  controlID: 11453
+  controlID: 424
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -231,7 +231,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 02b7ffff66fbffff
+      m_ExpandedIDs: 76fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -456,20 +456,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Probe/Mesh
+    - Assets
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Probe/Mesh
+  - Assets
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\School\Year 2\Block 1\Project Game\SpaceSim\Space Sim
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 39}
-    m_SelectedIDs: ce440000
-    m_LastClickedID: 17614
-    m_ExpandedIDs: 00000000843a000040430000a6430000e849000000ca9a3b
+    m_SelectedIDs: 80390000
+    m_LastClickedID: 14720
+    m_ExpandedIDs: 0000000080390000084300004e4a000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -497,7 +497,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000843a000040430000e849000000ca9a3b
+    m_ExpandedIDs: 0000000080390000084300004e4a000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -541,7 +541,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 13}
+      m_ClientGUIView: {fileID: 10}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
