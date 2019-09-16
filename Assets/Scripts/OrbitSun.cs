@@ -11,7 +11,7 @@ public class OrbitSun : MonoBehaviour
     }
 
     // Update is called once per frame
-    float rotationSpeed = 0.2f;
+    float rotationSpeed = 0.3f;
     void Update()
     {
          transform.Rotate(0,rotationSpeed*Time.deltaTime,0);

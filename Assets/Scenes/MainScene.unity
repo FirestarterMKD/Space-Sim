@@ -301,7 +301,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 180465873}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 36, y: -38.43536, z: -63}
+  m_LocalPosition: {x: 6.7, y: -38.43536, z: -5.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 395721144}
@@ -1500,7 +1500,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2038400513}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -24, y: -18.20772, z: 52}
+  m_LocalPosition: {x: -50.4, y: -18.20772, z: 31.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1818220074}
@@ -1836,7 +1836,7 @@ PrefabInstance:
     - target: {fileID: 6703095122648600375, guid: 6f570b1e22c5a0946b73698f2c7e945f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 23.9
+      value: 50.300003
       objectReference: {fileID: 0}
     - target: {fileID: 6703095122648600375, guid: 6f570b1e22c5a0946b73698f2c7e945f,
         type: 3}
@@ -1846,7 +1846,7 @@ PrefabInstance:
     - target: {fileID: 6703095122648600375, guid: 6f570b1e22c5a0946b73698f2c7e945f,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1973
+      value: 1993.8
       objectReference: {fileID: 0}
     - target: {fileID: 6703095122648600375, guid: 6f570b1e22c5a0946b73698f2c7e945f,
         type: 3}
@@ -1989,7 +1989,7 @@ PrefabInstance:
     - target: {fileID: 7372088368790091299, guid: 5afc28ef87cd7cc499797cce2a70a109,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -38.3
+      value: -9
       objectReference: {fileID: 0}
     - target: {fileID: 7372088368790091299, guid: 5afc28ef87cd7cc499797cce2a70a109,
         type: 3}
@@ -1999,7 +1999,7 @@ PrefabInstance:
     - target: {fileID: 7372088368790091299, guid: 5afc28ef87cd7cc499797cce2a70a109,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1834
+      value: 1776.9
       objectReference: {fileID: 0}
     - target: {fileID: 7372088368790091299, guid: 5afc28ef87cd7cc499797cce2a70a109,
         type: 3}
