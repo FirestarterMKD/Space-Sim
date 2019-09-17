@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{12330A49-8DE0-26E2-599B-65168E7F5BF9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TexturePacker.Runtime", "TexturePacker.Runtime.csproj", "{F550D72A-ED5D-AF47-04B5-C295D1318B69}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TexturePacker.Editor", "TexturePacker.Editor.csproj", "{3D1DBA86-7D53-3FBA-8474-4850DA5A724E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{05C8910D-5052-E549-827A-446BB94A4631}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{12330A49-8DE0-26E2-599B-65168E7F5BF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12330A49-8DE0-26E2-599B-65168E7F5BF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12330A49-8DE0-26E2-599B-65168E7F5BF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12330A49-8DE0-26E2-599B-65168E7F5BF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F550D72A-ED5D-AF47-04B5-C295D1318B69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F550D72A-ED5D-AF47-04B5-C295D1318B69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F550D72A-ED5D-AF47-04B5-C295D1318B69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F550D72A-ED5D-AF47-04B5-C295D1318B69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D1DBA86-7D53-3FBA-8474-4850DA5A724E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D1DBA86-7D53-3FBA-8474-4850DA5A724E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D1DBA86-7D53-3FBA-8474-4850DA5A724E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D1DBA86-7D53-3FBA-8474-4850DA5A724E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05C8910D-5052-E549-827A-446BB94A4631}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05C8910D-5052-E549-827A-446BB94A4631}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05C8910D-5052-E549-827A-446BB94A4631}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05C8910D-5052-E549-827A-446BB94A4631}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
