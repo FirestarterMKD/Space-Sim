@@ -75,6 +75,8 @@
     <Compile Include="Assets\Scripts\OrbitPlanetThree.cs" />
     <Compile Include="Assets\Scripts\OrbitPlanetTwo.cs" />
     <Compile Include="Assets\Scripts\OrbitSun.cs" />
+    <Compile Include="Assets\Scripts\Rotation.cs" />
+    <Compile Include="Assets\Scripts\RotationAtmo.cs" />
     <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
     <Compile Include="Assets\Starfield Skybox\Demo\Script\LookCamera.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
