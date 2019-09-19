@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 950, y: 522}
+  m_MinSize: {x: 950, y: 544}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -45,7 +45,7 @@ MonoBehaviour:
     y: 0
     width: 1536
     height: 781
-  m_MinSize: {x: 950, y: 522}
+  m_MinSize: {x: 950, y: 544}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &3
 MonoBehaviour:
@@ -111,10 +111,10 @@ MonoBehaviour:
     y: 30
     width: 1536
     height: 731
-  m_MinSize: {x: 681, y: 472}
-  m_MaxSize: {x: 14002, y: 14022}
+  m_MinSize: {x: 681, y: 494}
+  m_MaxSize: {x: 14004, y: 14044}
   vertical: 0
-  controlID: 6374
+  controlID: 4196
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -136,10 +136,10 @@ MonoBehaviour:
     y: 0
     width: 1185
     height: 731
-  m_MinSize: {x: 404, y: 472}
-  m_MaxSize: {x: 10000, y: 14022}
+  m_MinSize: {x: 404, y: 494}
+  m_MaxSize: {x: 10002, y: 14044}
   vertical: 1
-  controlID: 6375
+  controlID: 4197
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -164,7 +164,7 @@ MonoBehaviour:
   m_MinSize: {x: 404, y: 222}
   m_MaxSize: {x: 8004, y: 4022}
   vertical: 0
-  controlID: 6376
+  controlID: 4198
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -384,9 +384,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 9aeeffff76fbffffaa490000
+      m_SelectedIDs: 76fbffff
+      m_LastClickedID: -1162
+      m_ExpandedIDs: 76fbffff044900001a490000264900002a490000384900003c490000404900004449000058490000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -446,9 +446,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -0.00999999, y: -1.5700002, z: 301.74347}
+    m_Target: {x: 154.2774, y: -122.76256, z: 739.99493}
     speed: 2
-    m_Value: {x: -0.00999999, y: -1.5700002, z: 301.74347}
+    m_Value: {x: 154.2774, y: -122.76256, z: 739.99493}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -477,13 +477,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.18237704, y: -0.046601016, z: 0.008649452, w: 0.98215795}
+    m_Target: {x: 0.09304531, y: -0.44285348, z: 0.046281125, w: 0.8906488}
     speed: 2
-    m_Value: {x: 0.18227886, y: -0.05543449, z: 0.010289742, w: 0.981629}
+    m_Value: {x: -0.09304531, y: 0.44285348, z: -0.046281125, w: -0.8906487}
   m_Size:
-    m_Target: 42.681137
+    m_Target: 1297.2126
     speed: 2
-    m_Value: 42.404335
+    m_Value: 1241.3518
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -601,20 +601,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Planets/Prefabs
+    - Assets
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Planets/Prefabs
+  - Assets
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\School\Year 2\Block 1\Project Game\SpaceSim\Space Sim
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 55}
-    m_SelectedIDs: d0470000
-    m_LastClickedID: 18384
-    m_ExpandedIDs: 00000000b0390000e840000050430000644b000000ca9a3b
+    m_SelectedIDs: b0390000
+    m_LastClickedID: 14768
+    m_ExpandedIDs: 00000000b0390000444300004c4b000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -642,7 +642,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000b039000050430000644b000000ca9a3b
+    m_ExpandedIDs: 00000000b0390000444300004c4b000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
