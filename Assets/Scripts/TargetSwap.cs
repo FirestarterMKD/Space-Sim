@@ -1,100 +1,72 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-
-public class TargetSwap : MonoBehaviour
+public class TargetSwap  : MonoBehaviour
 {
-public Transform target;
-public float distance = 5.0f;
-public float xSpeed = 120.0f;
-public float ySpeed = 120.0f;
 
-public float yMinLimit = -20f;
-public float yMaxLimit = 80f;
+    /*
+	EXTENDED FLYCAM
+		Desi Quintans (CowfaceGames.com), 17 August 2012.
+		Based on FlyThrough.js by Slin (http://wiki.unity3d.com/index.php/FlyThrough), 17 May 2011.
+ 
+	LICENSE
+		Free as in speech, and free as in beer.
+ 
+	FEATURES
+		WASD/Arrows:    Movement
+		          Q:    Climb
+		          E:    Drop
+                      Shift:    Move faster
+                    Control:    Move slower
+                        End:    Toggle cursor locking to screen (you can also press Ctrl+P to toggle play mode on and off).
+	*/
 
-public float distanceMin = .5f;
-public float distanceMax = 15f;
+    public float cameraSensitivity = 90;
+    public float climbSpeed = 4;
+    public float normalMoveSpeed = 10;
+    public float slowMoveFactor = 0.25f;
+    public float fastMoveFactor = 3;
 
-public float smoothTime = 2f;
+    private float rotationX = 0.0f;
+    private float rotationY = 0.0f;
 
-float rotationYAxis = 0.0f;
-float rotationXAxis = 0.0f;
-
-float velocityX = 0.0f;
-float velocityY = 0.0f;
-
-
-
-//Use this for initialization
-void Start()
-{
-    Vector3 angles = transform.eulerAngles;
-    rotationYAxis = angles.y;
-    rotationXAxis = angles.x;
-
-    // Make the rigid body not change rotation
-    if (GetComponent<Rigidbody>())
+    void Start()
     {
-        GetComponent<Rigidbody>().freezeRotation = true;
-    }
-}
-
-
-void LateUpdate()
-{
-    if (Input.GetMouseButton(1))
-    {
-        RaycastHit hit; //This variable stores location for hit and information about object.
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition); //Cast ray from main camera to mouse position
-
-        if (Physics.Raycast(ray, out hit))
-        {
-            target = hit.collider.transform; //Set target to hit object
-        }
+        Screen.lockCursor = true;
     }
 
-    if (target)
+    void Update()
     {
-        if (Input.GetMouseButton(0))
+        rotationX += Input.GetAxis("Mouse X") * cameraSensitivity * Time.deltaTime;
+        rotationY += Input.GetAxis("Mouse Y") * cameraSensitivity * Time.deltaTime;
+        rotationY = Mathf.Clamp(rotationY, -90, 90);
+
+        transform.localRotation = Quaternion.AngleAxis(rotationX, Vector3.up);
+        transform.localRotation *= Quaternion.AngleAxis(rotationY, Vector3.left);
+
+        if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
         {
-            velocityX += xSpeed * Input.GetAxis("Mouse X") * distance * 0.02f;
-            velocityY += ySpeed * Input.GetAxis("Mouse Y") * 0.02f;
+            transform.position += transform.forward * (normalMoveSpeed * fastMoveFactor) * Input.GetAxis("Vertical") * Time.deltaTime;
+            transform.position += transform.right * (normalMoveSpeed * fastMoveFactor) * Input.GetAxis("Horizontal") * Time.deltaTime;
+        }
+        else if (Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.RightControl))
+        {
+            transform.position += transform.forward * (normalMoveSpeed * slowMoveFactor) * Input.GetAxis("Vertical") * Time.deltaTime;
+            transform.position += transform.right * (normalMoveSpeed * slowMoveFactor) * Input.GetAxis("Horizontal") * Time.deltaTime;
+        }
+        else
+        {
+            transform.position += transform.forward * normalMoveSpeed * Input.GetAxis("Vertical") * Time.deltaTime;
+            transform.position += transform.right * normalMoveSpeed * Input.GetAxis("Horizontal") * Time.deltaTime;
         }
 
-        rotationYAxis += velocityX;
-        rotationXAxis -= velocityY;
 
-        rotationXAxis = ClampAngle(rotationXAxis, yMinLimit, yMaxLimit);
+        if (Input.GetKey(KeyCode.Q)) { transform.position += transform.up * climbSpeed * Time.deltaTime; }
+        if (Input.GetKey(KeyCode.E)) { transform.position -= transform.up * climbSpeed * Time.deltaTime; }
 
-        Quaternion fromRotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, 0);
-        Quaternion toRotation = Quaternion.Euler(rotationXAxis, rotationYAxis, 0);
-        Quaternion rotation = toRotation;
-
-        distance = Mathf.Clamp(distance - Input.GetAxis("Mouse ScrollWheel") * 5, distanceMin, distanceMax);
-
-        RaycastHit hit;
-        if (Physics.Linecast(target.position, transform.position, out hit))
+        if (Input.GetKeyDown(KeyCode.End))
         {
-            distance -= hit.distance;
+            Screen.lockCursor = (Screen.lockCursor == false) ? true : false;
         }
-        Vector3 negDistance = new Vector3(0.0f, 0.0f, -distance);
-        Vector3 position = rotation * negDistance + target.position;
-
-        transform.rotation = rotation;
-        transform.position = position;
-
-        velocityX = Mathf.Lerp(velocityX, 0, Time.deltaTime * smoothTime);
-        velocityY = Mathf.Lerp(velocityY, 0, Time.deltaTime * smoothTime);
     }
-
 }
-
-public static float ClampAngle(float angle, float min, float max)
-{
-    if (angle < -360F)
-        angle += 360F;
-    if (angle > 360F)
-        angle -= 360F;
-    return Mathf.Clamp(angle, min, max);
-}
- }
