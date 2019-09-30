@@ -40,6 +40,17 @@ public class MouseOrbitImproved : MonoBehaviour
 
     void LateUpdate()
     {
+        if (Input.GetMouseButton(1))
+        {
+            RaycastHit hit; //This variable stores location for hit and information about object.
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition); //Cast ray from main camera to mouse position
+
+            if (Physics.Raycast(ray, out hit))
+            {
+                target = hit.collider.transform; //Set target to hit object
+            }
+        }
+
         if (target)
         {
             x += Input.GetAxis("Mouse X") * xSpeed * distance * 0.02f;
@@ -62,6 +73,7 @@ public class MouseOrbitImproved : MonoBehaviour
             transform.rotation = rotation;
             transform.position = position;
         }
+
     }
 
     public static float ClampAngle(float angle, float min, float max)
@@ -73,3 +85,4 @@ public class MouseOrbitImproved : MonoBehaviour
         return Mathf.Clamp(angle, min, max);
     }
 }
+
