@@ -509,11 +509,11 @@ InputManager:
     positiveButton: mouse 1
     altNegativeButton: 
     altPositiveButton: joystick button 1
-    gravity: 0
-    dead: 0
-    sensitivity: 0
+    gravity: 1000
+    dead: 0.0001
+    sensitivity: 1000
     snap: 0
     invert: 0
     type: 0
-    axis: 0
+    axis: 1
     joyNum: 0

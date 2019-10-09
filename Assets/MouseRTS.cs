@@ -129,7 +129,7 @@ public class MouseRTS : MonoBehaviour
     
     void Zoom()
     {
-        position.newDistance += position.zoomStep * -zoomInput;
+        position.newDistance += position.zoomStep * - zoomInput;
 
         position.distanceFromGround = Mathf.Lerp(position.distanceFromGround, position.newDistance, position.zoomSmooth * Time.deltaTime);
 
