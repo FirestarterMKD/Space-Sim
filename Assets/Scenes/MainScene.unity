@@ -1782,6 +1782,7 @@ GameObject:
   - component: {fileID: 1297650281}
   - component: {fileID: 1297650282}
   - component: {fileID: 1297650285}
+  - component: {fileID: 1297650286}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1907,12 +1908,12 @@ Camera:
   serializedVersion: 2
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
-  m_projectionMatrixMode: 1
+  m_projectionMatrixMode: 2
   m_GateFitMode: 2
   m_FOVAxisMode: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
-  m_FocalLength: 18
+  m_FocalLength: 12
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -1921,7 +1922,7 @@ Camera:
     height: 1
   near clip plane: 0.01
   far clip plane: 100000
-  field of view: 67.380135
+  field of view: 90
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -1946,13 +1947,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1297650280}
-  m_LocalRotation: {x: -0.19997399, y: -0.18186906, z: -0.004184389, w: -0.96276504}
-  m_LocalPosition: {x: -3.02, y: 99.9, z: 23.8}
+  m_LocalRotation: {x: 0.5, y: 0, z: 0, w: 0.8660254}
+  m_LocalPosition: {x: -6.6, y: 11.6, z: 292}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 22.553001, y: 382.396, z: 5.019}
+  m_LocalEulerAnglesHint: {x: 60, y: 0, z: 0}
 --- !u!114 &1297650285
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1962,18 +1963,65 @@ MonoBehaviour:
   m_GameObject: {fileID: 1297650280}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6fbae11e5880c80449c8a7bb4e8404f7, type: 3}
+  m_Script: {fileID: 11500000, guid: dc1d0432e3a405e4c8dbfaf1ad795b41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1155963436}
-  distance: 5
-  xSpeed: 120
-  ySpeed: 120
-  yOffset: 1
-  yMinLimit: -20
-  yMaxLimit: 80
-  distanceMin: 5
-  distanceMax: 50
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  position:
+    invertPan: 1
+    panSmooth: 20
+    distanceFromGround: 40
+    allowZoom: 1
+    zoomSmooth: 5
+    zoomStep: 5
+    maxZoom: 25
+    minZoom: 80
+    newDistance: 40
+  orbit:
+    xRoatation: 50
+    yRotation: 0
+    allowYOrbit: 1
+    yOrbitSmooth: 0.5
+  input:
+    PAN: MousePan
+    ORBIT_Y: MouseTurn
+    ZOOM: Mouse ScrollWheel
+--- !u!114 &1297650286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1297650280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc1d0432e3a405e4c8dbfaf1ad795b41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  position:
+    invertPan: 1
+    panSmooth: 6
+    distanceFromGround: 40
+    allowZoom: 1
+    zoomSmooth: 5
+    zoomStep: 5
+    maxZoom: 25
+    minZoom: 80
+    newDistance: 40
+  orbit:
+    xRoatation: 50
+    yRotation: 0
+    allowYOrbit: 1
+    yOrbitSmooth: 0.5
+  input:
+    PAN: MousePan
+    ORBIT_Y: MouseTurn
+    ZOOM: Mouse ScrollWheel
 --- !u!1 &1298478398
 GameObject:
   m_ObjectHideFlags: 0
