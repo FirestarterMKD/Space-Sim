@@ -1,10 +1,16 @@
-﻿
+
 using UnityEngine;
 using System.Collections;
 
-public class MouseRTS : MonoBehaviour
+public class MouseRTSZOOM : MonoBehaviour
 {
     public LayerMask groundLayer;
+    public float zoomSpeed;
+        public float orthographicSizeMin;
+        public float orthographicSizeMax;
+        public float fovMin;
+        public float fovMax;
+        private Camera myCamera;
 
     [System.Serializable]
     public class PositionSettings
@@ -13,10 +19,7 @@ public class MouseRTS : MonoBehaviour
         public float panSmooth = 20f;
         public float distanceFromGround = 40;
         public bool allowZoom = true;
-        public float zoomSmooth = 5;
-        public float zoomStep = 5;
-        public float maxZoom = 25;
-        public float minZoom = 80;
+        
 
         [HideInInspector]
         public float newDistance = 40;
@@ -37,7 +40,7 @@ public class MouseRTS : MonoBehaviour
     {
         public string PAN = "MousePan";
         public string ORBIT_Y = "MouseTurn";
-        public string ZOOM = "Mouse ScrollWheel";
+        
         
     }
 
@@ -49,7 +52,7 @@ public class MouseRTS : MonoBehaviour
     Vector3 camVel = Vector3.zero;
     Vector3 previousMousePos = Vector3.zero;
     Vector3 currentMousePos = Vector3.zero;
-    float panInput, orbitInput, zoomInput;
+    float panInput, orbitInput;
     int panDirection = 0;
 
     void Start()
@@ -57,7 +60,7 @@ public class MouseRTS : MonoBehaviour
         //Initialize code
         panInput = 0;
         orbitInput = 0;
-        zoomInput = 0;
+        myCamera = GetComponent<Camera>();
 
     }
 
@@ -66,7 +69,7 @@ public class MouseRTS : MonoBehaviour
         //Setting Input Variables
         panInput = Input.GetAxis(input.PAN);
         orbitInput = Input.GetAxis(input.ORBIT_Y);
-        zoomInput = Input.GetAxis(input.ZOOM);
+        
 
         previousMousePos = currentMousePos;
         currentMousePos = Input.mousePosition;
@@ -78,6 +81,31 @@ public class MouseRTS : MonoBehaviour
         //Updating input
         GetInput();
         //Zooming
+        if (myCamera.orthographic)
+        {
+            if (Input.GetAxis("Mouse ScrollWheel") < 0)
+            {
+                myCamera.orthographicSize += zoomSpeed;
+            }
+            if (Input.GetAxis("Mouse ScrollWheel") > 0)
+            {
+                myCamera.orthographicSize -= zoomSpeed;
+            }
+            myCamera.orthographicSize = Mathf.Clamp(myCamera.orthographicSize, orthographicSizeMin, orthographicSizeMax);
+        }
+        else
+        {
+            if (Input.GetAxis("Mouse ScrollWheel") < 0)
+            {
+                myCamera.fieldOfView += zoomSpeed;
+            }
+            if (Input.GetAxis("Mouse ScrollWheel") > 0)
+            {
+                myCamera.fieldOfView -= zoomSpeed;
+            }
+            myCamera.fieldOfView = Mathf.Clamp(myCamera.fieldOfView, fovMin, fovMax);
+        }
+
         if (position.allowZoom)
             Zoom();
         //Rotating
@@ -114,6 +142,7 @@ public class MouseRTS : MonoBehaviour
     }
     
     void HandleCameraDistance()
+    
     {
         Ray ray = new Ray(transform.position, transform.forward);
         RaycastHit hit;
@@ -129,20 +158,7 @@ public class MouseRTS : MonoBehaviour
     
     void Zoom()
     {
-        position.newDistance += position.zoomStep * - zoomInput;
-
-        position.distanceFromGround = Mathf.Lerp(position.distanceFromGround, position.newDistance, position.zoomSmooth * Time.deltaTime);
-
-        if (position.distanceFromGround < position.maxZoom)
-        {
-            position.distanceFromGround = position.maxZoom;
-            position.newDistance = position.maxZoom;
-        }
-        if (position.distanceFromGround > position.minZoom)
-        {
-            position.distanceFromGround = position.minZoom;
-            position.newDistance = position.minZoom;
-        }
+       
     }
 
     void Rotate()

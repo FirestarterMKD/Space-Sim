@@ -3307,8 +3307,8 @@ GameObject:
   - component: {fileID: 1297650283}
   - component: {fileID: 1297650281}
   - component: {fileID: 1297650282}
-  - component: {fileID: 1297650285}
   - component: {fileID: 1297650286}
+  - component: {fileID: 1297650285}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3487,33 +3487,33 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1297650280}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc1d0432e3a405e4c8dbfaf1ad795b41, type: 3}
+  m_Script: {fileID: 11500000, guid: 897d1445f7c778c458dc714eb68fdb4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  zoomSpeed: 5
+  orthographicSizeMin: 25
+  orthographicSizeMax: 300
+  fovMin: 0
+  fovMax: 160
   position:
     invertPan: 1
     panSmooth: 20
     distanceFromGround: 40
     allowZoom: 1
-    zoomSmooth: 5
-    zoomStep: 5
-    maxZoom: 25
-    minZoom: 80
     newDistance: 40
   orbit:
     xRoatation: 50
     yRotation: 0
     allowYOrbit: 1
-    yOrbitSmooth: 0.5
+    yOrbitSmooth: 8
   input:
     PAN: MousePan
     ORBIT_Y: MouseTurn
-    ZOOM: Mouse ScrollWheel
 --- !u!114 &1297650286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3521,7 +3521,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1297650280}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc1d0432e3a405e4c8dbfaf1ad795b41, type: 3}
   m_Name: 
