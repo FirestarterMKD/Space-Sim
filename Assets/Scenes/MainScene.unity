@@ -3434,7 +3434,7 @@ Camera:
   serializedVersion: 2
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
-  m_projectionMatrixMode: 2
+  m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
   m_SensorSize: {x: 36, y: 24}
@@ -3449,7 +3449,7 @@ Camera:
   near clip plane: 0.01
   far clip plane: 100000
   field of view: 90
-  orthographic: 0
+  orthographic: 1
   orthographic size: 5
   m_Depth: -1
   m_CullingMask:
@@ -3496,14 +3496,14 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   zoomSpeed: 5
-  orthographicSizeMin: 25
+  orthographicSizeMin: 0
   orthographicSizeMax: 300
-  fovMin: 0
-  fovMax: 160
+  fovMin: 30
+  fovMax: 180
   position:
     invertPan: 1
     panSmooth: 20
-    distanceFromGround: 40
+    distanceFromGround: 0
     allowZoom: 1
     newDistance: 40
   orbit:

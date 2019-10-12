@@ -15,8 +15,8 @@ public class MouseRTS : MonoBehaviour
         public bool allowZoom = true;
         public float zoomSmooth = 5;
         public float zoomStep = 5;
-        public float maxZoom = 25;
-        public float minZoom = 80;
+        public float maxZoom = 80;
+        public float minZoom = 25;
 
         [HideInInspector]
         public float newDistance = 40;
@@ -119,6 +119,7 @@ public class MouseRTS : MonoBehaviour
         Ray ray = new Ray(transform.position, transform.forward);
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit, 100, groundLayer))
+        
         {
             destination = Vector3.Normalize(transform.position - hit.point) * position.distanceFromGround;
             destination += hit.point;
@@ -130,19 +131,20 @@ public class MouseRTS : MonoBehaviour
     
     void Zoom()
     {
-        position.newDistance += position.zoomStep * - zoomInput;
+        Vector3 targetPos = transform.position;
 
-        position.distanceFromGround = Mathf.Lerp(position.distanceFromGround, position.newDistance, position.zoomSmooth * Time.deltaTime);
-
-        if (position.distanceFromGround < position.maxZoom)
-        {
-            position.distanceFromGround = position.maxZoom;
-            position.newDistance = position.maxZoom;
+        if (zoomInput == 0){
+            return;
         }
-        if (position.distanceFromGround > position.minZoom)
-        {
-            position.distanceFromGround = position.minZoom;
-            position.newDistance = position.minZoom;
+
+        if (zoomInput > 0) {
+            
+            transform.position = targetPos * position.zoomStep;
+        }
+
+        if (zoomInput > 0) {
+            
+            transform.position = targetPos *- position.zoomStep;
         }
     }
 
