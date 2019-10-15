@@ -4,10 +4,13 @@ using UnityEngine;
 using UnityEngine.UI;
 public class RandomResources : MonoBehaviour
 {
-    public int randomIron;
-    public int randomCurrency;
-    public int randomRawFuel;
-    public int randomUranium;
+    private int randomIron;
+    private int randomCurrency;
+    private int randomRawFuel;
+    private int randomUranium;
+
+    
+
     void Start()
     {
         randomIron = Random.Range(10, 1000);

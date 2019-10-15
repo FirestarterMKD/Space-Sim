@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CargoController : MonoBehaviour
+public class ProbeController : MonoBehaviour
+
 {
     public float speed = 15f;
     GameObject CargoShip;
-    GameObject Planet;
+    GameObject ColliderPlanet7;
 
     private Transform target;
 
@@ -14,18 +15,19 @@ public class CargoController : MonoBehaviour
     void Start()
     {
         CargoShip = GameObject.FindWithTag("Cargo");
-        Planet = GameObject.FindWithTag("PlanetOne");
+        ColliderPlanet7 = GameObject.FindWithTag("PlanetSeven");
 
-        target = Planet.transform;
+        target = ColliderPlanet7.transform;
     }
 
     // Update is called once per frame
     void Update()
     {
-        float step =  speed * Time.deltaTime; 
+        float step = speed * Time.deltaTime;
         transform.position = Vector3.MoveTowards(transform.position, target.position, step);
 
     }
 
-    
+
 }
+

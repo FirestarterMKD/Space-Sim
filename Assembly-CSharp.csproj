@@ -57,6 +57,7 @@
   <ItemGroup>
      <Compile Include="Assets\CargoController.cs" />
      <Compile Include="Assets\mouse.cs" />
+     <Compile Include="Assets\ProbeController.cs" />
      <Compile Include="Assets\Scripts\menuu\ClickMenu.cs" />
      <Compile Include="Assets\Scripts\menuu\RandomResources.cs" />
      <Compile Include="Assets\Scripts\MouseOrbitImproved.cs" />

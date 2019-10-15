@@ -323,7 +323,7 @@ GameObject:
   - component: {fileID: 8516798746802789058}
   - component: {fileID: 9097871307816963078}
   m_Layer: 0
-  m_Name: Probe
+  m_Name: Probe Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -338,7 +338,7 @@ Transform:
   m_GameObject: {fileID: 4641775867699849425}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.15772967, y: -0.4760816, z: 297.0952}
-  m_LocalScale: {x: 8.971857, y: 8.971857, z: 8.971857}
+  m_LocalScale: {x: 88, y: 88, z: 88}
   m_Children:
   - {fileID: 5366170158718107388}
   - {fileID: 6998953455702496810}
