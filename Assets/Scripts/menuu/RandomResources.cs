@@ -27,10 +27,4 @@ public class RandomResources : MonoBehaviour
         Text UraniumText = GameObject.Find(gameObject.name + "/UraniumText").GetComponent<Text>();
         UraniumText.text = "Uranium: " + randomUranium;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

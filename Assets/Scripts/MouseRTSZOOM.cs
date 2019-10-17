@@ -6,8 +6,8 @@ public class MouseRTSZOOM : MonoBehaviour
 {
     public LayerMask groundLayer;
     public float zoomSpeed;
-        public float orthographicSizeMin;
-        public float orthographicSizeMax;
+        public float ZoomMin;
+        public float ZoomMax;
         public float fovMin;
         public float fovMax;
         private Camera myCamera;
@@ -30,7 +30,7 @@ public class MouseRTSZOOM : MonoBehaviour
     [System.Serializable]
     public class OrbitSettings
 {
-        public float xRoatation = 50;
+        public float xRotation = 50;
         public float yRotation = 0;
         public bool allowYOrbit = true;
         public float yOrbitSmooth = 0.5f;
@@ -81,29 +81,18 @@ public class MouseRTSZOOM : MonoBehaviour
         //Updating input
         GetInput();
         //Zooming
-        if (myCamera.orthographic)
+        if (myCamera)
         {
             if (Input.GetAxis("Mouse ScrollWheel") < 0)
             {
-                myCamera.orthographicSize += zoomSpeed;
+                myCamera.transform.Translate(new Vector3 (0, zoomSpeed, 0), Space.World);
             }
             if (Input.GetAxis("Mouse ScrollWheel") > 0)
             {
-                myCamera.orthographicSize -= zoomSpeed;
+                myCamera.transform.Translate(new Vector3 (0, -zoomSpeed, 0), Space.World);
             }
-            myCamera.orthographicSize = Mathf.Clamp(myCamera.orthographicSize, orthographicSizeMin, orthographicSizeMax);
-        }
-        else
-        {
-            if (Input.GetAxis("Mouse ScrollWheel") < 0)
-            {
-                myCamera.fieldOfView += zoomSpeed;
-            }
-            if (Input.GetAxis("Mouse ScrollWheel") > 0)
-            {
-                myCamera.fieldOfView -= zoomSpeed;
-            }
-            myCamera.fieldOfView = Mathf.Clamp(myCamera.fieldOfView, fovMin, fovMax);
+            float y = Mathf.Clamp(myCamera.transform.position.y, ZoomMin, ZoomMax);
+            myCamera.transform.position = new Vector3(myCamera.transform.position.x, y, myCamera.transform.position.z);
         }
 
         if (position.allowZoom)
@@ -168,7 +157,7 @@ public class MouseRTSZOOM : MonoBehaviour
             orbit.yRotation += (currentMousePos.x - previousMousePos.x) * orbit.yOrbitSmooth * Time.deltaTime;
         }
 
-        transform.rotation = Quaternion.Euler(orbit.xRoatation, orbit.yRotation, 0);
+        transform.rotation = Quaternion.Euler(orbit.xRotation, orbit.yRotation, 0);
     }
 }
 

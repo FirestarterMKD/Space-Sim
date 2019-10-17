@@ -27,7 +27,7 @@ public class MouseRTS : MonoBehaviour
     [System.Serializable]
     public class OrbitSettings
 {
-        public float xRoatation = 50;
+        public float xRotation = 50;
         public float yRotation = 0;
         public bool allowYOrbit = true;
         public float yOrbitSmooth = 0.5f;
@@ -57,7 +57,6 @@ public class MouseRTS : MonoBehaviour
         //Initialize code
         panInput = 0;
         orbitInput = 0;
-        zoomInput = 0;
 
     }
 
@@ -142,7 +141,7 @@ public class MouseRTS : MonoBehaviour
             transform.position = targetPos * position.zoomStep;
         }
 
-        if (zoomInput > 0) {
+        if (zoomInput < 0) {
             
             transform.position = targetPos *- position.zoomStep;
         }
@@ -155,7 +154,7 @@ public class MouseRTS : MonoBehaviour
             orbit.yRotation += (currentMousePos.x - previousMousePos.x) * orbit.yOrbitSmooth * Time.deltaTime;
         }
 
-        transform.rotation = Quaternion.Euler(orbit.xRoatation, orbit.yRotation, 0);
+        transform.rotation = Quaternion.Euler(orbit.xRotation, orbit.yRotation, 0);
     }
 }
 
