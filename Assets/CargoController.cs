@@ -15,6 +15,12 @@ public class CargoController : MonoBehaviour
 
     GameObject CargoShip;
     GameObject Planet;
+    GameObject PlanetTwo;
+    GameObject PlanetThree;
+    GameObject PlanetFour;
+    GameObject PlanetFive;
+    GameObject PlanetSix;
+    GameObject PlanetSeven;
 
     private Transform target;
 
@@ -23,18 +29,26 @@ public class CargoController : MonoBehaviour
     {
         CargoShip = GameObject.FindWithTag("Cargo");
         Planet = GameObject.FindWithTag("PlanetOne");
+        PlanetTwo = GameObject.FindWithTag("PlanetTwo");
+        PlanetThree = GameObject.FindWithTag("PlanetThree");
+        PlanetFour = GameObject.FindWithTag("PlanetFour");
+        PlanetFive = GameObject.FindWithTag("PlanetFive");
+        PlanetSix = GameObject.FindWithTag("PlanetSix");
+        PlanetSeven = GameObject.FindWithTag("PlanetSeven");
 
         target = Planet.transform;
-        cargoFuel = 0;
+
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-            sendCargo();
+        checkCargo();
+        sendCargo();
+
     }
-       
+
     void sendCargo()
     {
 
@@ -45,5 +59,20 @@ public class CargoController : MonoBehaviour
         }
     }
 
+    void checkCargo()
+    { 
+
+        if (cargoIron > maxIron){
+            cargoIron = maxIron;
+            print("That is too much Iron!!");
+} 
+        
+         if (cargoUranium > maxUranium){
+            cargoUranium = maxUranium;     
+            print("That is too much Uranium!!");
+
+
+}
+}
 
 }

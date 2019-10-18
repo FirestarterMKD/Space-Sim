@@ -1764,6 +1764,7 @@ GameObject:
   m_Component:
   - component: {fileID: 325463707}
   - component: {fileID: 325463708}
+  - component: {fileID: 325463710}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -1831,6 +1832,14 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 457352719}
+  m_CullTransparentMesh: 0
+--- !u!222 &325463710
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 325463706}
   m_CullTransparentMesh: 0
 --- !u!224 &350344016
 RectTransform:
@@ -6250,6 +6259,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 15
+  maxIron: 5000
+  maxUranium: 1000
+  cargoIron: 5100
+  cargoUranium: 0
+  cargoFuel: 10
+  minFuel: 1
+  maxFuel: 1000
 --- !u!4 &1102956024 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5965250702409947067, guid: c13b1030145d5d84cbc78ef38e888c1f,
@@ -7594,7 +7610,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1297650280}
   m_LocalRotation: {x: 0.5, y: 0, z: 0, w: 0.8660254}
-  m_LocalPosition: {x: -2.2, y: 13.8, z: 291}
+  m_LocalPosition: {x: -2.2, y: 13.8, z: 287.28}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -13586,6 +13602,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Planet 3
       objectReference: {fileID: 0}
+    - target: {fileID: 1482817613644634242, guid: 08f48f26625bedc408153fc3705f34de,
+        type: 3}
+      propertyPath: m_TagString
+      value: PlanetThree
+      objectReference: {fileID: 0}
     - target: {fileID: 2508328089326316177, guid: 08f48f26625bedc408153fc3705f34de,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13753,6 +13774,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Planet 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7247288166126560680, guid: c13b1030145d5d84cbc78ef38e888c1f,
+        type: 3}
+      propertyPath: m_TagString
+      value: PlanetFive
       objectReference: {fileID: 0}
     - target: {fileID: 5965250702409947067, guid: c13b1030145d5d84cbc78ef38e888c1f,
         type: 3}
@@ -14174,6 +14200,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Planet 4
       objectReference: {fileID: 0}
+    - target: {fileID: 2676675957606310836, guid: 563f2482cea955f4cac2678c81e34db0,
+        type: 3}
+      propertyPath: m_TagString
+      value: PlanetFour
+      objectReference: {fileID: 0}
     - target: {fileID: 1404612098065240487, guid: 563f2482cea955f4cac2678c81e34db0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14337,6 +14368,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Planet 2
       objectReference: {fileID: 0}
+    - target: {fileID: 6409169827184893494, guid: a5c7022a0ec4c9d4384b561786aa82e0,
+        type: 3}
+      propertyPath: m_TagString
+      value: PlanetTwo
+      objectReference: {fileID: 0}
     - target: {fileID: 6409169827184893493, guid: a5c7022a0ec4c9d4384b561786aa82e0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14430,6 +14466,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Planet 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 278661321327205716, guid: 78b93c19b195acf4bac1141f210f2ef6,
+        type: 3}
+      propertyPath: m_TagString
+      value: PlanetSix
       objectReference: {fileID: 0}
     - target: {fileID: 3856586676223586119, guid: 78b93c19b195acf4bac1141f210f2ef6,
         type: 3}

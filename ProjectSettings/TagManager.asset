@@ -7,6 +7,11 @@ TagManager:
   - Cargo
   - PlanetOne
   - PlanetSeven
+  - PlanetThree
+  - PlanetFour
+  - PlanetFive
+  - PlanetSix
+  - PlanetTwo
   layers:
   - Default
   - TransparentFX
