@@ -26,6 +26,7 @@ public class CargoController : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
+
     {
         CargoShip = GameObject.FindWithTag("Cargo");
         Planet = GameObject.FindWithTag("PlanetOne");
@@ -46,33 +47,62 @@ public class CargoController : MonoBehaviour
     {
         checkCargo();
         sendCargo();
+        sendCargo2();
+
 
     }
 
     void sendCargo()
     {
-
-        if (cargoFuel > minFuel)
+        target = Planet.transform;
+        if (Input.GetKey("space"))
         {
-            float step = speed * Time.deltaTime;
-            transform.position = Vector3.MoveTowards(transform.position, target.position, step);
+            if (cargoFuel > minFuel)
+            {
+                float step = speed * Time.deltaTime;
+                transform.position = Vector3.MoveTowards(transform.position, target.position, step);
+            }
         }
     }
 
+    
+
+    void sendCargo2()
+    {
+        target = PlanetTwo.transform;
+        if (Input.GetKey("backspace "))
+        {
+            if (cargoFuel > minFuel)
+            {
+                float step = speed * Time.deltaTime;
+                transform.position = Vector3.MoveTowards(transform.position, target.position, step);
+            }
+        }
+    }
+
+
+
+
+
+
     void checkCargo()
-    { 
+        {
 
-        if (cargoIron > maxIron){
-            cargoIron = maxIron;
-            print("That is too much Iron!!");
-} 
-        
-         if (cargoUranium > maxUranium){
-            cargoUranium = maxUranium;     
-            print("That is too much Uranium!!");
+            if (cargoIron > maxIron)
+            {
+                cargoIron = maxIron;
+                print("That is too much Iron!!");
+            }
+
+            if (cargoUranium > maxUranium)
+            {
+                cargoUranium = maxUranium;
+                print("That is too much Uranium!!");
 
 
-}
-}
+            }
+        }
+
+    
 
 }
