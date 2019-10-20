@@ -4679,7 +4679,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 15508115}
-        m_MethodName: clickBuy
+        m_MethodName: clickBuyCargo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5023,7 +5023,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4229aa45a8ec705439a364311653a199, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  youHaveText: {fileID: 871095824}
+  youHaveTextCargo: {fileID: 871095824}
+  youHaveTextScout: {fileID: 1243958257}
 --- !u!114 &871095824
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6258,12 +6259,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c00333d7bf368e74aa9bd36889d24005, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerIron: 0
+  playerUranium: 0
   speed: 15
   maxIron: 5000
   maxUranium: 1000
-  cargoIron: 5100
+  cargoIron: 0
   cargoUranium: 0
-  cargoFuel: 10
+  cargoFuel: 50
   minFuel: 1
   maxFuel: 1000
 --- !u!4 &1102956024 stripped
@@ -6904,7 +6907,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4229aa45a8ec705439a364311653a199, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  youHaveText: {fileID: 1243958257}
+  youHaveTextCargo: {fileID: 871095824}
+  youHaveTextScout: {fileID: 1243958257}
 --- !u!114 &1243958257
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9316,7 +9320,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 688083437}
-        m_MethodName: clickBuy
+        m_MethodName: clickBuyScout
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10268,6 +10272,51 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Panel: {fileID: 374135045}
   PreviousPanel: {fileID: 159737132}
+--- !u!1 &1720838919
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1720838921}
+  - component: {fileID: 1720838920}
+  m_Layer: 0
+  m_Name: EditCosts
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1720838920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1720838919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df9d31f8805044645b4372e7ba978e2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CargoIron: 100
+  ScoutIron: 250
+--- !u!4 &1720838921
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1720838919}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 476.5, y: 210, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 25
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1721256860
 GameObject:
   m_ObjectHideFlags: 0
@@ -11120,7 +11169,6 @@ GameObject:
   - component: {fileID: 1841503775}
   - component: {fileID: 1841503774}
   - component: {fileID: 1841503773}
-  - component: {fileID: 1841503772}
   m_Layer: 5
   m_Name: Canvas3
   m_TagString: Untagged
@@ -11151,18 +11199,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1841503772
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1841503770}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bf2fc15f7ebc4b4ca5cfccfc2155dcc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1841503773
 MonoBehaviour:
   m_ObjectHideFlags: 0
