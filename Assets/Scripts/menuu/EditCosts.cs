@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class EditCosts : MonoBehaviour
 {
-    public int CargoIron;
-    public int ScoutIron;
+    public int PlayerStartIron;
+    public int CargoIronCost;
+    public int ScoutIronCost;
 
     // Start is called before the first frame update
     void Start()
     {
-        ShipBuilder.CargoCostIron = CargoIron;
-        ShipBuilder.ScoutCostIron = ScoutIron;
+        PlayerPlanetScript.iron = PlayerStartIron;
+        ShipBuilder.CargoCostIron = CargoIronCost;
+        ShipBuilder.ScoutCostIron = ScoutIronCost;
     }
 
     // Update is called once per frame

@@ -10301,8 +10301,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df9d31f8805044645b4372e7ba978e2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CargoIron: 100
-  ScoutIron: 250
+  PlayerStartIron: 1000
+  CargoIronCost: 500
+  ScoutIronCost: 100
 --- !u!4 &1720838921
 Transform:
   m_ObjectHideFlags: 0
