@@ -9832,7 +9832,7 @@ MonoBehaviour:
   canvasObject5: {fileID: 526509901}
   canvasObject6: {fileID: 1580554921}
   canvasObject7: {fileID: 353051250}
-  speed: 15
+  speed: 150
 --- !u!1 &1611104397
 GameObject:
   m_ObjectHideFlags: 0

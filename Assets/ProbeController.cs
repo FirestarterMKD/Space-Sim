@@ -92,7 +92,19 @@ public class ProbeController : MonoBehaviour
             float step = speed * Time.deltaTime;
             transform.position = Vector3.MoveTowards(transform.position, target.position, step);
 
-        }
+            if (Vector3.Distance(transform.position, target.position) < 0.001f)
+            {
+                canvasObject1.SetActive(false);
+                canvasObject2.SetActive(true);
+                canvasObject3.SetActive(false);
+                canvasObject4.SetActive(false);
+                canvasObject5.SetActive(false);
+                canvasObject6.SetActive(false);
+                canvasObject7.SetActive(false);
+
+            }
+
+            }
     }
 
     void checkPlanet3()
@@ -103,7 +115,18 @@ public class ProbeController : MonoBehaviour
             float step = speed * Time.deltaTime;
             transform.position = Vector3.MoveTowards(transform.position, target.position, step);
 
-        }
+            if (Vector3.Distance(transform.position, target.position) < 0.001f)
+            {
+                canvasObject1.SetActive(false);
+                canvasObject2.SetActive(false);
+                canvasObject3.SetActive(true);
+                canvasObject4.SetActive(false);
+                canvasObject5.SetActive(false);
+                canvasObject6.SetActive(false);
+                canvasObject7.SetActive(false);
+            }
+
+            }
     }
 
     void checkPlanet4()
@@ -114,7 +137,18 @@ public class ProbeController : MonoBehaviour
             float step = speed * Time.deltaTime;
             transform.position = Vector3.MoveTowards(transform.position, target.position, step);
 
-        }
+            if (Vector3.Distance(transform.position, target.position) < 0.001f)
+            {
+                canvasObject1.SetActive(false);
+                canvasObject2.SetActive(false);
+                canvasObject3.SetActive(false);
+                canvasObject4.SetActive(true);
+                canvasObject5.SetActive(false);
+                canvasObject6.SetActive(false);
+                canvasObject7.SetActive(false);
+            }
+
+            }
     }
 
     void checkPlanet5()
@@ -125,7 +159,18 @@ public class ProbeController : MonoBehaviour
             float step = speed * Time.deltaTime;
             transform.position = Vector3.MoveTowards(transform.position, target.position, step);
 
-        }
+            if (Vector3.Distance(transform.position, target.position) < 0.001f)
+            {
+                canvasObject1.SetActive(false);
+                canvasObject2.SetActive(false);
+                canvasObject3.SetActive(false);
+                canvasObject4.SetActive(false);
+                canvasObject5.SetActive(true);
+                canvasObject6.SetActive(false);
+                canvasObject7.SetActive(false);
+            }
+
+            }
     }
 
     void checkPlanet6()
@@ -136,7 +181,18 @@ public class ProbeController : MonoBehaviour
             float step = speed * Time.deltaTime;
             transform.position = Vector3.MoveTowards(transform.position, target.position, step);
 
-        }
+            if (Vector3.Distance(transform.position, target.position) < 0.001f)
+            {
+                canvasObject1.SetActive(false);
+                canvasObject2.SetActive(false);
+                canvasObject3.SetActive(false);
+                canvasObject4.SetActive(false);
+                canvasObject5.SetActive(false);
+                canvasObject6.SetActive(true);
+                canvasObject7.SetActive(false);
+            }
+
+            }
     }
 
     void checkPlanet7()
@@ -147,7 +203,17 @@ public class ProbeController : MonoBehaviour
             float step = speed * Time.deltaTime;
             transform.position = Vector3.MoveTowards(transform.position, target.position, step);
 
-        }
+            if (Vector3.Distance(transform.position, target.position) < 0.001f)
+            {
+                canvasObject1.SetActive(false);
+                canvasObject2.SetActive(false);
+                canvasObject3.SetActive(false);
+                canvasObject4.SetActive(false);
+                canvasObject5.SetActive(false);
+                canvasObject6.SetActive(false);
+                canvasObject7.SetActive(true);
+            }
+            }
     }
 
 
