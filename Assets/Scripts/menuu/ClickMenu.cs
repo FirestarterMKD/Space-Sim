@@ -10,6 +10,7 @@ public class ClickMenu : MonoBehaviour
     private void Start()
     {
     }
+
     public void OpenPanel()
     {
         if (Panel != null)

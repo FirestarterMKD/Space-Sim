@@ -91,6 +91,7 @@
     <Compile Include="Assets\Scripts\RotationAtmo.cs" />
     <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
     <Compile Include="Assets\Scripts\TargetSwap.cs" />
+    <Compile Include="Assets\Sounds.cs" />
     <Compile Include="Assets\Starfield Skybox\Demo\Script\LookCamera.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Reference Include="Unity.Timeline.Editor">

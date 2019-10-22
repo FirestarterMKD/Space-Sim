@@ -5,6 +5,9 @@ using UnityEngine;
 public class EditCosts : MonoBehaviour
 {
     public int PlayerStartIron;
+    public int PlayerStartFuel;
+    public int PlayerStartUranium;
+    public int PlayerStartCurrency;
     public int CargoIronCost;
     public int ScoutIronCost;
 
@@ -12,6 +15,9 @@ public class EditCosts : MonoBehaviour
     void Start()
     {
         PlayerPlanetScript.iron = PlayerStartIron;
+        PlayerPlanetScript.uranium = PlayerStartUranium;
+        PlayerPlanetScript.fuel = PlayerStartFuel;
+        PlayerPlanetScript.currency = PlayerStartCurrency;
         ShipBuilder.CargoCostIron = CargoIronCost;
         ShipBuilder.ScoutCostIron = ScoutIronCost;
     }
