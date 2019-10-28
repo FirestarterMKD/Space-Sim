@@ -82,6 +82,18 @@ public class ProbeController : MonoBehaviour
             canvasObject6.SetActive(false);
             canvasObject7.SetActive(false);
         }
+
+        if (Vector3.Distance(transform.position, target.position) > 0.005f)
+        {
+            canvasObject1.SetActive(false);
+            canvasObject2.SetActive(false);
+            canvasObject3.SetActive(false);
+            canvasObject4.SetActive(false);
+            canvasObject5.SetActive(false);
+            canvasObject6.SetActive(false);
+            canvasObject7.SetActive(false);
+        }
+
     }
 
     void checkPlanet2()
@@ -102,6 +114,17 @@ public class ProbeController : MonoBehaviour
                 canvasObject6.SetActive(false);
                 canvasObject7.SetActive(false);
 
+            }
+            
+            if (Vector3.Distance(transform.position, target.position) > 0.005f)
+            {
+                canvasObject1.SetActive(false);
+                canvasObject2.SetActive(false);
+                canvasObject3.SetActive(false);
+                canvasObject4.SetActive(false);
+                canvasObject5.SetActive(false);
+                canvasObject6.SetActive(false);
+                canvasObject7.SetActive(false);
             }
 
             }
@@ -125,8 +148,18 @@ public class ProbeController : MonoBehaviour
                 canvasObject6.SetActive(false);
                 canvasObject7.SetActive(false);
             }
-
+            if (Vector3.Distance(transform.position, target.position) > 0.005f)
+            {
+                canvasObject1.SetActive(false);
+                canvasObject2.SetActive(false);
+                canvasObject3.SetActive(false);
+                canvasObject4.SetActive(false);
+                canvasObject5.SetActive(false);
+                canvasObject6.SetActive(false);
+                canvasObject7.SetActive(false);
             }
+
+        }
     }
 
     void checkPlanet4()
@@ -148,7 +181,18 @@ public class ProbeController : MonoBehaviour
                 canvasObject7.SetActive(false);
             }
 
+            if (Vector3.Distance(transform.position, target.position) > 0.005f)
+            {
+                canvasObject1.SetActive(false);
+                canvasObject2.SetActive(false);
+                canvasObject3.SetActive(false);
+                canvasObject4.SetActive(false);
+                canvasObject5.SetActive(false);
+                canvasObject6.SetActive(false);
+                canvasObject7.SetActive(false);
             }
+
+        }
     }
 
     void checkPlanet5()
@@ -170,7 +214,18 @@ public class ProbeController : MonoBehaviour
                 canvasObject7.SetActive(false);
             }
 
+            if (Vector3.Distance(transform.position, target.position) > 0.005f)
+            {
+                canvasObject1.SetActive(false);
+                canvasObject2.SetActive(false);
+                canvasObject3.SetActive(false);
+                canvasObject4.SetActive(false);
+                canvasObject5.SetActive(false);
+                canvasObject6.SetActive(false);
+                canvasObject7.SetActive(false);
             }
+
+        }
     }
 
     void checkPlanet6()
@@ -181,7 +236,7 @@ public class ProbeController : MonoBehaviour
             float step = speed * Time.deltaTime;
             transform.position = Vector3.MoveTowards(transform.position, target.position, step);
 
-            if (Vector3.Distance(transform.position, target.position) < 0.001f)
+            if (Vector3.Distance(transform.position, target.position) < 0.002f)
             {
                 canvasObject1.SetActive(false);
                 canvasObject2.SetActive(false);
@@ -191,8 +246,17 @@ public class ProbeController : MonoBehaviour
                 canvasObject6.SetActive(true);
                 canvasObject7.SetActive(false);
             }
-
+            if (Vector3.Distance(transform.position, target.position) > 0.005f)
+            {
+                canvasObject1.SetActive(false);
+                canvasObject2.SetActive(false);
+                canvasObject3.SetActive(false);
+                canvasObject4.SetActive(false);
+                canvasObject5.SetActive(false);
+                canvasObject6.SetActive(false);
+                canvasObject7.SetActive(false);
             }
+        }
     }
 
     void checkPlanet7()
@@ -203,7 +267,7 @@ public class ProbeController : MonoBehaviour
             float step = speed * Time.deltaTime;
             transform.position = Vector3.MoveTowards(transform.position, target.position, step);
 
-            if (Vector3.Distance(transform.position, target.position) < 0.001f)
+            if (Vector3.Distance(transform.position, target.position) < 0.002f)
             {
                 canvasObject1.SetActive(false);
                 canvasObject2.SetActive(false);
@@ -213,7 +277,17 @@ public class ProbeController : MonoBehaviour
                 canvasObject6.SetActive(false);
                 canvasObject7.SetActive(true);
             }
+            if (Vector3.Distance(transform.position, target.position) > 0.005f)
+            {
+                canvasObject1.SetActive(false);
+                canvasObject2.SetActive(false);
+                canvasObject3.SetActive(false);
+                canvasObject4.SetActive(false);
+                canvasObject5.SetActive(false);
+                canvasObject6.SetActive(false);
+                canvasObject7.SetActive(false);
             }
+        }
     }
 
 
