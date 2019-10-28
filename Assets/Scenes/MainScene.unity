@@ -7705,6 +7705,7 @@ GameObject:
   - component: {fileID: 1297650281}
   - component: {fileID: 1297650282}
   - component: {fileID: 1297650285}
+  - component: {fileID: 1297650286}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -7910,6 +7911,22 @@ MonoBehaviour:
   input:
     PAN: MousePan
     ORBIT_Y: MouseTurn
+--- !u!114 &1297650286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1297650280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef7f01bbffa9ac546b50368413fec13e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxAltitude: 200
+  planet: {fileID: 922530536}
+  Outline: {fileID: 2100000, guid: a73af78375adc8140a4b17474a4325b3, type: 2}
+  GasGiant1: {fileID: 2100000, guid: 670e8280a92756e4e8433fc10d1bd2bd, type: 2}
 --- !u!1 &1298478398
 GameObject:
   m_ObjectHideFlags: 0
@@ -14353,7 +14370,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: a73af78375adc8140a4b17474a4325b3, type: 2}
+      objectReference: {fileID: 2100000, guid: 670e8280a92756e4e8433fc10d1bd2bd, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a560c754943e1f4ca6aef986fa1ad13, type: 3}
 --- !u!1001 &1707540622243670940
