@@ -5,6 +5,10 @@ using UnityEngine.UI;
 
 public class ClickPlanets : MonoBehaviour
 {
+    AudioListener cameraOneAudioLis;
+    AudioListener cameraTwoAudioLis;
+    public GameObject cameraOne;
+    public GameObject cameraTwo;
     public GameObject canvasObject1;
     public GameObject canvasObject2;
     public GameObject canvasObject3;
@@ -15,6 +19,10 @@ public class ClickPlanets : MonoBehaviour
 
     void Start()
     {
+        cameraOne = GameObject.Find("cameraOne");
+        cameraTwo = GameObject.Find("cameraTwo");
+       
+        
         canvasObject1.SetActive(false);
         canvasObject2.SetActive(false);
         canvasObject3.SetActive(false);
@@ -35,6 +43,8 @@ public class ClickPlanets : MonoBehaviour
                 {
                     if (hit.transform.name == "ColliderPlanetOne")
                     {
+                        
+
                         canvasObject1.SetActive(true);
                         canvasObject2.SetActive(false);
                         canvasObject3.SetActive(false);
@@ -107,4 +117,5 @@ public class ClickPlanets : MonoBehaviour
             }
         }
     }
+
 }
