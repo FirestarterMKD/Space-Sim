@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerPlanetScript : MonoBehaviour
 {
@@ -10,15 +11,18 @@ public class PlayerPlanetScript : MonoBehaviour
     public Text playerFuelText;
     public Text playerUraniumText;
     public Text playerCurrencyText;
+    public Text playerPowerText;
 
     public static int iron = 500;
     public static int currency = 0;
     public static int fuel = 0;
+    public static float power = 100;
     public static int uranium = 0;
+    public static float MultiplyMode = 0;
     // Start is called before the first frame update
     void Start()
     {
-        
+        uranium -= 1;
     }
 
     // Update is called once per frame
@@ -28,5 +32,13 @@ public class PlayerPlanetScript : MonoBehaviour
         playerFuelText.text = "FUEL : " + fuel;
         playerUraniumText.text = "URANIUM : " + uranium;
         playerCurrencyText.text = "CURRENCY : " + currency;
+        playerPowerText.text = "POWER : " + power;
+
+        power -= Time.deltaTime * MultiplyMode;
+
+        if(power <= 0)
+        {
+            SceneManager.LoadScene(0);
+        }
     }
 }
