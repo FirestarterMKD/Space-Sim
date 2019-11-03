@@ -12,6 +12,8 @@ TagManager:
   - PlanetFive
   - PlanetSix
   - PlanetTwo
+  - CamOne
+  - CamTwo
   layers:
   - Default
   - TransparentFX
