@@ -5,10 +5,9 @@ using UnityEngine;
 public class Sounds : MonoBehaviour
 {
     public AudioSource click;
-    public AudioSource main;
     void Start()
     {
-        main.Play();
+        
     }
 
     // Update is called once per frame
@@ -16,7 +15,7 @@ public class Sounds : MonoBehaviour
     {
         if (Input.GetMouseButtonUp(0))
         {
-            //click.Play();
+            click.Play();
         }
     }
 }
