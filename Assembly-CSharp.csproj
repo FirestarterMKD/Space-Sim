@@ -68,6 +68,7 @@
     <Compile Include="Assets\ProbeController.cs" />
     <Compile Include="Assets\Scripts\CameraSwitch.cs" />
     <Compile Include="Assets\Scripts\MaterialSwap.cs" />
+    <Compile Include="Assets\Scripts\menuu\Buildings.cs" />
     <Compile Include="Assets\Scripts\menuu\ClickMenu.cs" />
     <Compile Include="Assets\Scripts\menuu\ClickPlanets.cs" />
     <Compile Include="Assets\Scripts\menuu\EditCosts.cs" />
