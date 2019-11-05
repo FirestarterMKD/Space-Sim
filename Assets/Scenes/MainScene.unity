@@ -6449,7 +6449,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -350, y: 172}
+  m_AnchoredPosition: {x: -529, y: 172}
   m_SizeDelta: {x: 100, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &578518589
@@ -15110,7 +15110,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1319332888
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15138,8 +15138,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -347.7, y: 14.5}
-  m_SizeDelta: {x: -1000, y: -390}
+  m_AnchoredPosition: {x: -524, y: 13}
+  m_SizeDelta: {x: -1216.3, y: -338.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1319332889
 MonoBehaviour:
@@ -19441,9 +19441,11 @@ MonoBehaviour:
   PlayerStartUranium: 0
   PlayerStartCurrency: 0
   PlayerStartPower: 100
-  PowerUse: 1
+  PowerUse: 0
   CargoIronCost: 500
   ScoutIronCost: 100
+  CargoPowerCost: 3
+  ScoutPowerCost: 4
 --- !u!4 &1720838921
 Transform:
   m_ObjectHideFlags: 0

@@ -13,6 +13,10 @@ public class EditCosts : MonoBehaviour
     public int CargoIronCost;
     public int ScoutIronCost;
 
+
+    public int CargoPowerCost;
+    public int ScoutPowerCost;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +28,8 @@ public class EditCosts : MonoBehaviour
         ShipBuilder.CargoCostIron = CargoIronCost;
         ShipBuilder.ScoutCostIron = ScoutIronCost;
         PlayerPlanetScript.MultiplyMode = PowerUse;
+        ShipBuilder.CargoCostPower = CargoPowerCost;
+        ShipBuilder.ScoutCostPower = ScoutPowerCost;
     }
 
     // Update is called once per frame

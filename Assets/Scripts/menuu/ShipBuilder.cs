@@ -14,6 +14,9 @@ public class ShipBuilder : MonoBehaviour
     public static string currentTextScout;
     public static int CargoCostIron = 500;
     public static int ScoutCostIron = 100;
+    public static int CargoCostPower = 10;
+    public static int ScoutCostPower = 5;
+
     void Start()
     {
 
@@ -30,6 +33,7 @@ public class ShipBuilder : MonoBehaviour
                 currentQuantityCargo += valueCargo;
                 currentTextCargo = currentQuantityCargo.ToString();
                 PlayerPlanetScript.iron -= (CargoCostIron * valueCargo);
+                PlayerPlanetScript.MultiplyMode += (valueCargo * CargoCostPower);
             }
             else
             {
@@ -53,6 +57,7 @@ public class ShipBuilder : MonoBehaviour
                 currentQuantityScout += valueScout;
                 currentTextScout = currentQuantityScout.ToString();
                 PlayerPlanetScript.iron -= (ScoutCostIron * valueScout);
+                PlayerPlanetScript.MultiplyMode += (valueScout * ScoutCostPower);
             }
             else
             {

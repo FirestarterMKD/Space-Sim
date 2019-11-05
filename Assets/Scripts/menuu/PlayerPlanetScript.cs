@@ -19,6 +19,10 @@ public class PlayerPlanetScript : MonoBehaviour
     public static float power = 100;
     public static int uranium = 0;
     public static float MultiplyMode = 0;
+
+    public static float second = 1;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,7 +38,14 @@ public class PlayerPlanetScript : MonoBehaviour
         playerCurrencyText.text = "CURRENCY : " + currency;
         playerPowerText.text = "POWER : " + power;
 
-        power -= Time.deltaTime * MultiplyMode;
+        second -= Time.deltaTime;
+
+        if (second <= 0)
+        {
+
+            power -= 1 * MultiplyMode;
+            second += 1;
+        }
 
         if(power <= 0)
         {
