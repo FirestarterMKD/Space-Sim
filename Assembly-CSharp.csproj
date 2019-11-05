@@ -55,10 +55,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\CargoController.cs" />
      <Compile Include="Assets\mouse.cs" />
-     <Compile Include="Assets\ProbeController.cs" />
      <Compile Include="Assets\Scripts\CameraSwitch.cs" />
+     <Compile Include="Assets\Scripts\CargoController.cs" />
      <Compile Include="Assets\Scripts\MaterialSwap.cs" />
      <Compile Include="Assets\Scripts\menuu\Buildings.cs" />
      <Compile Include="Assets\Scripts\menuu\ClickMenu.cs" />
@@ -84,12 +83,12 @@
      <Compile Include="Assets\Scripts\OrbitPlanetThree.cs" />
      <Compile Include="Assets\Scripts\OrbitPlanetTwo.cs" />
      <Compile Include="Assets\Scripts\OrbitSun.cs" />
+     <Compile Include="Assets\Scripts\ProbeController.cs" />
      <Compile Include="Assets\Scripts\Rotation.cs" />
      <Compile Include="Assets\Scripts\RotationAtmo.cs" />
-     <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
-     <Compile Include="Assets\Sounds.cs" />
+     <Compile Include="Assets\Scripts\Sounds.cs" />
+     <Compile Include="Assets\Scripts\targetswapper.cs" />
      <Compile Include="Assets\Starfield Skybox\Demo\Script\LookCamera.cs" />
-     <Compile Include="Assets\targetswapper.cs" />
      <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>C:/Users/noahb/OneDrive/Desktop/Group 6 Year 2/Space Sim/Space-Sim/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>

@@ -60,17 +60,16 @@ public class CargoController : MonoBehaviour
 
     }
 
-    void sendCargo()
+    public void sendCargo()
     {
         target = Planet.transform;
-        if (Input.GetKey("1"))
-        {
+        
             if (cargoFuel > minFuel)
             {
                 float step = speed * Time.deltaTime;
                 transform.position = Vector3.MoveTowards(transform.position, target.position, step);
             }
-        }
+        
     }
 
 

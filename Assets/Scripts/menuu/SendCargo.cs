@@ -24,6 +24,7 @@ public class SendCargo : MonoBehaviour
     public float minFuel = 1;
     public float maxFuel = 1000;
 
+
     private Transform target;
     private Transform position;
         
