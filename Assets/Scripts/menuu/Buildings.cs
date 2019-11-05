@@ -53,7 +53,8 @@ public class Buildings : MonoBehaviour
         {
             SolarPlant++;
             PlayerPlanetScript.iron = PlayerPlanetScript.iron - CostSolarPlant;
-            CostSolarPlant = CostSolarPlant * 2;
+            CostSolarPlant = CostSolarPlant * 4;
+            PlayerPlanetScript.MultiplyMode -= 5;
         }
         else
         {
@@ -67,7 +68,7 @@ public class Buildings : MonoBehaviour
         {
             Refinery++;
             PlayerPlanetScript.iron = PlayerPlanetScript.iron - CostRefinery;
-            CostRefinery = CostRefinery * 2;
+            CostRefinery = CostRefinery * 3;
         }
         else
         {
@@ -82,6 +83,8 @@ public class Buildings : MonoBehaviour
             NuclearReactor++;
             PlayerPlanetScript.iron = PlayerPlanetScript.iron - CostNuclearReactor;
             CostNuclearReactor = CostNuclearReactor * 2;
+
+            PlayerPlanetScript.MultiplyMode -= 50;
         }
         else
         {

@@ -36,7 +36,7 @@ public class PlayerPlanetScript : MonoBehaviour
         playerFuelText.text = "FUEL : " + fuel;
         playerUraniumText.text = "URANIUM : " + uranium;
         playerCurrencyText.text = "CURRENCY : " + currency;
-        playerPowerText.text = "POWER : " + power;
+        playerPowerText.text = "POWER : " + power + " Gen(" + (MultiplyMode * -1) +")";
 
         second -= Time.deltaTime;
 

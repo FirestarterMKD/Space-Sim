@@ -8,12 +8,16 @@ public class ShipBuilder : MonoBehaviour
     public InputField quantity;
     private int valueCargo;
     private int valueScout;
+
     public static int currentQuantityCargo = 0;
     public static int currentQuantityScout = 0;
+
     public static string currentTextCargo;
     public static string currentTextScout;
+
     public static int CargoCostIron = 500;
     public static int ScoutCostIron = 100;
+
     public static int CargoCostPower = 10;
     public static int ScoutCostPower = 5;
 
@@ -33,7 +37,7 @@ public class ShipBuilder : MonoBehaviour
                 currentQuantityCargo += valueCargo;
                 currentTextCargo = currentQuantityCargo.ToString();
                 PlayerPlanetScript.iron -= (CargoCostIron * valueCargo);
-                PlayerPlanetScript.MultiplyMode += (valueCargo * CargoCostPower);
+                PlayerPlanetScript.MultiplyMode += (currentQuantityCargo * CargoCostPower);
             }
             else
             {
