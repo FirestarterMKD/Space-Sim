@@ -13,7 +13,6 @@ public class ClickPlanets : MonoBehaviour
     public GameObject canvasObject4;
     public GameObject canvasObject5;
     public GameObject canvasObject6;
-    public GameObject canvasObject7;
 
     void Start()
     {
@@ -23,7 +22,6 @@ public class ClickPlanets : MonoBehaviour
         canvasObject4.SetActive(false);
         canvasObject5.SetActive(false);
         canvasObject6.SetActive(false);
-        canvasObject7.SetActive(false);
     }
 
     void Update()

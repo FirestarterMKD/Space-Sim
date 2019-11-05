@@ -22,6 +22,8 @@ public class PlayerPlanetScript : MonoBehaviour
 
     public static float second = 1;
 
+    
+
 
     // Start is called before the first frame update
     void Start()
@@ -39,6 +41,9 @@ public class PlayerPlanetScript : MonoBehaviour
         playerPowerText.text = "POWER : " + power + " Gen(" + (MultiplyMode * -1) +")";
 
         second -= Time.deltaTime;
+
+        
+
 
         if (second <= 0)
         {

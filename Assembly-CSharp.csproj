@@ -71,6 +71,7 @@
     <Compile Include="Assets\Scripts\menuu\ClickMenu.cs" />
     <Compile Include="Assets\Scripts\menuu\ClickPlanets.cs" />
     <Compile Include="Assets\Scripts\menuu\EditCosts.cs" />
+    <Compile Include="Assets\Scripts\menuu\MyPlanetLook.cs" />
     <Compile Include="Assets\Scripts\menuu\OpenPlanetMenu.cs" />
     <Compile Include="Assets\Scripts\menuu\PlayerPlanetScript.cs" />
     <Compile Include="Assets\Scripts\menuu\RandomResources.cs" />

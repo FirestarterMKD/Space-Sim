@@ -11,7 +11,6 @@ public class ProbeController : MonoBehaviour
     public GameObject canvasObject4;
     public GameObject canvasObject5;
     public GameObject canvasObject6;
-    public GameObject canvasObject7;
 
     public float speed = 15f;
     GameObject Planet;
@@ -49,7 +48,6 @@ public class ProbeController : MonoBehaviour
         canvasObject4.SetActive(false);
         canvasObject5.SetActive(false);
         canvasObject6.SetActive(false);
-        canvasObject7.SetActive(false);
         
     }
 
@@ -95,8 +93,7 @@ public class ProbeController : MonoBehaviour
             canvasObject3.SetActive(false);
             canvasObject4.SetActive(false);
             canvasObject5.SetActive(false);
-            canvasObject6.SetActive(false);
-            canvasObject7.SetActive(false);
+            canvasObject6.SetActive(false); 
             arrived = !arrived;
         }
 
@@ -107,8 +104,7 @@ public class ProbeController : MonoBehaviour
             canvasObject3.SetActive(false);
             canvasObject4.SetActive(false);
             canvasObject5.SetActive(false);
-            canvasObject6.SetActive(false);
-            canvasObject7.SetActive(false);
+            canvasObject6.SetActive(false); 
         }
     }
 
@@ -125,8 +121,7 @@ public class ProbeController : MonoBehaviour
             canvasObject3.SetActive(false);
             canvasObject4.SetActive(false);
             canvasObject5.SetActive(false);
-            canvasObject6.SetActive(false);
-            canvasObject7.SetActive(false);
+            canvasObject6.SetActive(false); 
             arrived2 = !arrived2;
         }
 
@@ -137,8 +132,7 @@ public class ProbeController : MonoBehaviour
             canvasObject3.SetActive(false);
             canvasObject4.SetActive(false);
             canvasObject5.SetActive(false);
-            canvasObject6.SetActive(false);
-            canvasObject7.SetActive(false);
+            canvasObject6.SetActive(false); 
         }
     }
 
@@ -155,8 +149,7 @@ public class ProbeController : MonoBehaviour
                 canvasObject3.SetActive(true);
                 canvasObject4.SetActive(false);
                 canvasObject5.SetActive(false);
-                canvasObject6.SetActive(false);
-                canvasObject7.SetActive(false);
+                canvasObject6.SetActive(false); 
 
             arrived3 = !arrived3;
         }
@@ -167,8 +160,7 @@ public class ProbeController : MonoBehaviour
                 canvasObject3.SetActive(false);
                 canvasObject4.SetActive(false);
                 canvasObject5.SetActive(false);
-                canvasObject6.SetActive(false);
-                canvasObject7.SetActive(false);
+                canvasObject6.SetActive(false); 
             }
     }
 
@@ -185,8 +177,7 @@ public class ProbeController : MonoBehaviour
                 canvasObject3.SetActive(false);
                 canvasObject4.SetActive(true);
                 canvasObject5.SetActive(false);
-                canvasObject6.SetActive(false);
-                canvasObject7.SetActive(false);
+                canvasObject6.SetActive(false); 
             arrived4 = !arrived4;
 
         }
@@ -198,8 +189,7 @@ public class ProbeController : MonoBehaviour
                 canvasObject3.SetActive(false);
                 canvasObject4.SetActive(false);
                 canvasObject5.SetActive(false);
-                canvasObject6.SetActive(false);
-                canvasObject7.SetActive(false);
+                canvasObject6.SetActive(false); 
             }
     }
 
@@ -216,8 +206,7 @@ public class ProbeController : MonoBehaviour
                 canvasObject3.SetActive(false);
                 canvasObject4.SetActive(false);
                 canvasObject5.SetActive(true);
-                canvasObject6.SetActive(false);
-                canvasObject7.SetActive(false);
+                canvasObject6.SetActive(false); 
             arrived5 = !arrived5;
         }
 
@@ -228,8 +217,7 @@ public class ProbeController : MonoBehaviour
                 canvasObject3.SetActive(false);
                 canvasObject4.SetActive(false);
                 canvasObject5.SetActive(false);
-                canvasObject6.SetActive(false);
-                canvasObject7.SetActive(false);
+                canvasObject6.SetActive(false); 
             }
     }
 
@@ -246,8 +234,7 @@ public class ProbeController : MonoBehaviour
                 canvasObject3.SetActive(false);
                 canvasObject4.SetActive(false);
                 canvasObject5.SetActive(false);
-                canvasObject6.SetActive(true);
-                canvasObject7.SetActive(false);
+                canvasObject6.SetActive(true); 
             arrived6 = !arrived6;
         }
             if (Vector3.Distance(transform.position, target.position) > 0.005f)
@@ -257,8 +244,7 @@ public class ProbeController : MonoBehaviour
                 canvasObject3.SetActive(false);
                 canvasObject4.SetActive(false);
                 canvasObject5.SetActive(false);
-                canvasObject6.SetActive(false);
-                canvasObject7.SetActive(false);
+                canvasObject6.SetActive(false); 
             }
     }
 
@@ -275,8 +261,7 @@ public class ProbeController : MonoBehaviour
                 canvasObject3.SetActive(false);
                 canvasObject4.SetActive(false);
                 canvasObject5.SetActive(false);
-                canvasObject6.SetActive(false);
-                canvasObject7.SetActive(true);
+                canvasObject6.SetActive(false); 
             }
             if (Vector3.Distance(transform.position, target.position) > 0.005f)
             {
@@ -285,8 +270,7 @@ public class ProbeController : MonoBehaviour
                 canvasObject3.SetActive(false);
                 canvasObject4.SetActive(false);
                 canvasObject5.SetActive(false);
-                canvasObject6.SetActive(false);
-                canvasObject7.SetActive(false);
+                canvasObject6.SetActive(false); 
             }
     }
 

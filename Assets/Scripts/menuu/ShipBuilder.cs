@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class ShipBuilder : MonoBehaviour
 {
     public InputField quantity;
-    private int valueCargo;
-    private int valueScout;
+    public static int valueCargo;
+    public static int valueScout;
 
     public static int currentQuantityCargo = 0;
     public static int currentQuantityScout = 0;
