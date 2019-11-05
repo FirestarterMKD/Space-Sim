@@ -38,8 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.00007322622, g: 0.00007524975, b: 0.00009980782,
-    a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3304,6 +3303,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfd5189c24736504f832cd1f342ab5a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CargoShip: {fileID: 0}
+  Planet: {fileID: 0}
+  PlanetTwo: {fileID: 0}
+  PlanetThree: {fileID: 0}
+  PlanetFour: {fileID: 0}
+  PlanetFive: {fileID: 0}
+  PlanetSix: {fileID: 0}
+  PlanetSeven: {fileID: 0}
   playerIron: 0
   playerUranium: 0
   speed: 15
@@ -3314,6 +3321,8 @@ MonoBehaviour:
   cargoFuel: 50
   minFuel: 1
   maxFuel: 1000
+  target: {fileID: 0}
+  position: {fileID: 0}
 --- !u!114 &263914825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5671,6 +5680,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfd5189c24736504f832cd1f342ab5a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CargoShip: {fileID: 0}
+  Planet: {fileID: 0}
+  PlanetTwo: {fileID: 0}
+  PlanetThree: {fileID: 0}
+  PlanetFour: {fileID: 0}
+  PlanetFive: {fileID: 0}
+  PlanetSix: {fileID: 0}
+  PlanetSeven: {fileID: 0}
   playerIron: 0
   playerUranium: 0
   speed: 15
@@ -5681,6 +5698,8 @@ MonoBehaviour:
   cargoFuel: 50
   minFuel: 1
   maxFuel: 1000
+  target: {fileID: 0}
+  position: {fileID: 0}
 --- !u!114 &535454280
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6273,6 +6292,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfd5189c24736504f832cd1f342ab5a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CargoShip: {fileID: 0}
+  Planet: {fileID: 0}
+  PlanetTwo: {fileID: 0}
+  PlanetThree: {fileID: 0}
+  PlanetFour: {fileID: 0}
+  PlanetFive: {fileID: 0}
+  PlanetSix: {fileID: 0}
+  PlanetSeven: {fileID: 0}
   playerIron: 0
   playerUranium: 0
   speed: 15
@@ -6283,6 +6310,8 @@ MonoBehaviour:
   cargoFuel: 50
   minFuel: 1
   maxFuel: 1000
+  target: {fileID: 0}
+  position: {fileID: 0}
 --- !u!114 &581149044
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9024,6 +9053,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfd5189c24736504f832cd1f342ab5a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CargoShip: {fileID: 0}
+  Planet: {fileID: 0}
+  PlanetTwo: {fileID: 0}
+  PlanetThree: {fileID: 0}
+  PlanetFour: {fileID: 0}
+  PlanetFive: {fileID: 0}
+  PlanetSix: {fileID: 0}
+  PlanetSeven: {fileID: 0}
   playerIron: 0
   playerUranium: 0
   speed: 15
@@ -9034,6 +9071,8 @@ MonoBehaviour:
   cargoFuel: 50
   minFuel: 1
   maxFuel: 1000
+  target: {fileID: 0}
+  position: {fileID: 0}
 --- !u!114 &819137958
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13343,7 +13382,6 @@ GameObject:
   - component: {fileID: 1262664243}
   - component: {fileID: 1262664242}
   - component: {fileID: 1262664241}
-  - component: {fileID: 1262664244}
   m_Layer: 5
   m_Name: Attack
   m_TagString: Untagged
@@ -13414,7 +13452,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1721171044}
         m_MethodName: SendingCargo
         m_Mode: 1
         m_Arguments:
@@ -13465,28 +13503,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1262664239}
   m_CullTransparentMesh: 0
---- !u!114 &1262664244
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1262664239}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dfd5189c24736504f832cd1f342ab5a3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerIron: 0
-  playerUranium: 0
-  speed: 15
-  maxIron: 5000
-  maxUranium: 1000
-  cargoIron: 0
-  cargoUranium: 0
-  cargoFuel: 50
-  minFuel: 1
-  maxFuel: 1000
 --- !u!1 &1264374446
 GameObject:
   m_ObjectHideFlags: 0
@@ -16073,7 +16089,6 @@ GameObject:
   - component: {fileID: 1532844359}
   - component: {fileID: 1532844358}
   - component: {fileID: 1532844357}
-  - component: {fileID: 1532844356}
   m_Layer: 5
   m_Name: Attack (1)
   m_TagString: Untagged
@@ -16101,28 +16116,6 @@ RectTransform:
   m_AnchoredPosition: {x: 490.19995, y: -127.7}
   m_SizeDelta: {x: 60, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1532844356
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1532844354}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dfd5189c24736504f832cd1f342ab5a3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerIron: 0
-  playerUranium: 0
-  speed: 15
-  maxIron: 5000
-  maxUranium: 1000
-  cargoIron: 0
-  cargoUranium: 0
-  cargoFuel: 50
-  minFuel: 1
-  maxFuel: 1000
 --- !u!114 &1532844357
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16166,8 +16159,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1532844356}
-        m_MethodName: SendingCargo
+      - m_Target: {fileID: 1721171044}
+        m_MethodName: SendCargoThree
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -17693,7 +17686,6 @@ GameObject:
   - component: {fileID: 1611439300}
   - component: {fileID: 1611439299}
   - component: {fileID: 1611439298}
-  - component: {fileID: 1611439297}
   m_Layer: 5
   m_Name: Attack
   m_TagString: Untagged
@@ -17721,28 +17713,6 @@ RectTransform:
   m_AnchoredPosition: {x: 490.19995, y: -127.7}
   m_SizeDelta: {x: 60, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1611439297
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1611439295}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dfd5189c24736504f832cd1f342ab5a3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerIron: 0
-  playerUranium: 0
-  speed: 15
-  maxIron: 5000
-  maxUranium: 1000
-  cargoIron: 0
-  cargoUranium: 0
-  cargoFuel: 50
-  minFuel: 1
-  maxFuel: 1000
 --- !u!114 &1611439298
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17786,8 +17756,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1611439297}
-        m_MethodName: SendingCargo
+      - m_Target: {fileID: 1721171044}
+        m_MethodName: SendCargoFive
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -17893,7 +17863,6 @@ GameObject:
   - component: {fileID: 1640984646}
   - component: {fileID: 1640984645}
   - component: {fileID: 1640984644}
-  - component: {fileID: 1640984643}
   m_Layer: 5
   m_Name: Attack
   m_TagString: Untagged
@@ -17921,28 +17890,6 @@ RectTransform:
   m_AnchoredPosition: {x: 490.19995, y: -127.7}
   m_SizeDelta: {x: 60, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1640984643
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1640984641}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dfd5189c24736504f832cd1f342ab5a3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerIron: 0
-  playerUranium: 0
-  speed: 15
-  maxIron: 5000
-  maxUranium: 1000
-  cargoIron: 0
-  cargoUranium: 0
-  cargoFuel: 50
-  minFuel: 1
-  maxFuel: 1000
 --- !u!114 &1640984644
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17986,8 +17933,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1640984643}
-        m_MethodName: SendingCargo
+      - m_Target: {fileID: 1721171044}
+        m_MethodName: SendCargoFour
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -18966,6 +18913,31 @@ MonoBehaviour:
   SolarPlantLvlTxt: {fileID: 1041047448}
   RefinaryLvlTxt: {fileID: 1140553373}
   NuclearReactorLvlTxt: {fileID: 259484409}
+--- !u!1 &1721171041 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5356706122066309679, guid: 1085caf10f096024f9fbfb2c2aee9c40,
+    type: 3}
+  m_PrefabInstance: {fileID: 9102864649891510962}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1721171044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1721171041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c366fd2d95d92745b20bd45144af214, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 30
+  CargoArrived: 0
+  CargoArrived2: 0
+  CargoArrived3: 0
+  CargoArrived4: 0
+  CargoArrived5: 0
+  CargoArrived6: 0
 --- !u!1 &1721256860
 GameObject:
   m_ObjectHideFlags: 0
@@ -20801,7 +20773,6 @@ GameObject:
   - component: {fileID: 1882942835}
   - component: {fileID: 1882942834}
   - component: {fileID: 1882942833}
-  - component: {fileID: 1882942832}
   m_Layer: 5
   m_Name: SendScout
   m_TagString: Untagged
@@ -20829,28 +20800,6 @@ RectTransform:
   m_AnchoredPosition: {x: 368, y: -170.2}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1882942832
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1882942830}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dfd5189c24736504f832cd1f342ab5a3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerIron: 0
-  playerUranium: 0
-  speed: 15
-  maxIron: 5000
-  maxUranium: 1000
-  cargoIron: 0
-  cargoUranium: 0
-  cargoFuel: 50
-  minFuel: 1
-  maxFuel: 1000
 --- !u!114 &1882942833
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22397,7 +22346,6 @@ GameObject:
   - component: {fileID: 1991156977}
   - component: {fileID: 1991156976}
   - component: {fileID: 1991156975}
-  - component: {fileID: 1991156974}
   m_Layer: 5
   m_Name: Attack
   m_TagString: Untagged
@@ -22425,28 +22373,6 @@ RectTransform:
   m_AnchoredPosition: {x: 490.19995, y: -127.7}
   m_SizeDelta: {x: 60, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1991156974
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1991156972}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dfd5189c24736504f832cd1f342ab5a3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerIron: 0
-  playerUranium: 0
-  speed: 15
-  maxIron: 5000
-  maxUranium: 1000
-  cargoIron: 0
-  cargoUranium: 0
-  cargoFuel: 50
-  minFuel: 1
-  maxFuel: 1000
 --- !u!114 &1991156975
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22490,8 +22416,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1991156974}
-        m_MethodName: SendingCargo
+      - m_Target: {fileID: 1721171044}
+        m_MethodName: SendCargoTwo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
