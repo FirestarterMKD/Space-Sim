@@ -38,7 +38,8 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.00007322622, g: 0.00007524975, b: 0.00009980782,
+    a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3303,26 +3304,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfd5189c24736504f832cd1f342ab5a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CargoShip: {fileID: 0}
-  Planet: {fileID: 0}
-  PlanetTwo: {fileID: 0}
-  PlanetThree: {fileID: 0}
-  PlanetFour: {fileID: 0}
-  PlanetFive: {fileID: 0}
-  PlanetSix: {fileID: 0}
-  PlanetSeven: {fileID: 0}
-  playerIron: 0
-  playerUranium: 0
-  speed: 15
-  maxIron: 5000
-  maxUranium: 1000
-  cargoIron: 0
-  cargoUranium: 0
-  cargoFuel: 50
-  minFuel: 1
-  maxFuel: 1000
-  target: {fileID: 0}
-  position: {fileID: 0}
 --- !u!114 &263914825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5680,26 +5661,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfd5189c24736504f832cd1f342ab5a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CargoShip: {fileID: 0}
-  Planet: {fileID: 0}
-  PlanetTwo: {fileID: 0}
-  PlanetThree: {fileID: 0}
-  PlanetFour: {fileID: 0}
-  PlanetFive: {fileID: 0}
-  PlanetSix: {fileID: 0}
-  PlanetSeven: {fileID: 0}
-  playerIron: 0
-  playerUranium: 0
-  speed: 15
-  maxIron: 5000
-  maxUranium: 1000
-  cargoIron: 0
-  cargoUranium: 0
-  cargoFuel: 50
-  minFuel: 1
-  maxFuel: 1000
-  target: {fileID: 0}
-  position: {fileID: 0}
 --- !u!114 &535454280
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6252,7 +6213,6 @@ GameObject:
   - component: {fileID: 581149046}
   - component: {fileID: 581149045}
   - component: {fileID: 581149044}
-  - component: {fileID: 581149043}
   m_Layer: 5
   m_Name: Attack (1)
   m_TagString: Untagged
@@ -6280,38 +6240,6 @@ RectTransform:
   m_AnchoredPosition: {x: 490.19995, y: -127.7}
   m_SizeDelta: {x: 60, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &581149043
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 581149041}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dfd5189c24736504f832cd1f342ab5a3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CargoShip: {fileID: 0}
-  Planet: {fileID: 0}
-  PlanetTwo: {fileID: 0}
-  PlanetThree: {fileID: 0}
-  PlanetFour: {fileID: 0}
-  PlanetFive: {fileID: 0}
-  PlanetSix: {fileID: 0}
-  PlanetSeven: {fileID: 0}
-  playerIron: 0
-  playerUranium: 0
-  speed: 15
-  maxIron: 5000
-  maxUranium: 1000
-  cargoIron: 0
-  cargoUranium: 0
-  cargoFuel: 50
-  minFuel: 1
-  maxFuel: 1000
-  target: {fileID: 0}
-  position: {fileID: 0}
 --- !u!114 &581149044
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6355,8 +6283,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 581149043}
-        m_MethodName: SendingCargo
+      - m_Target: {fileID: 1721171044}
+        m_MethodName: SendCargoSix
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8974,7 +8902,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Planet Nine
+  m_Text: Zulu 9
 --- !u!222 &813666131
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9053,26 +8981,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfd5189c24736504f832cd1f342ab5a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CargoShip: {fileID: 0}
-  Planet: {fileID: 0}
-  PlanetTwo: {fileID: 0}
-  PlanetThree: {fileID: 0}
-  PlanetFour: {fileID: 0}
-  PlanetFive: {fileID: 0}
-  PlanetSix: {fileID: 0}
-  PlanetSeven: {fileID: 0}
-  playerIron: 0
-  playerUranium: 0
-  speed: 15
-  maxIron: 5000
-  maxUranium: 1000
-  cargoIron: 0
-  cargoUranium: 0
-  cargoFuel: 50
-  minFuel: 1
-  maxFuel: 1000
-  target: {fileID: 0}
-  position: {fileID: 0}
 --- !u!114 &819137958
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10734,10 +10642,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 12
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -10745,7 +10653,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Planet Eight?
+  m_Text: 'Gamma Capulus
 
 '
 --- !u!222 &994256924
@@ -11873,7 +11781,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 240395311}
-        m_MethodName: PlanetChangeSeven
+        m_MethodName: PlanetChangeFour
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12339,7 +12247,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 240395311}
-        m_MethodName: PlanetChangeFive
+        m_MethodName: PlanetChangeSeven
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12470,9 +12378,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Planet Three
-
-'
+  m_Text: Khufu
 --- !u!222 &1203107589
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12750,7 +12656,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 240395311}
-        m_MethodName: PlanetChangeFour
+        m_MethodName: PlanetChangeFive
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12960,7 +12866,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Planet Five \n"
+  m_Text: Gemini 5
 --- !u!222 &1225325251
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -18615,9 +18521,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Planet Four
-
-'
+  m_Text: Zamhareer
 --- !u!222 &1674459101
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -18938,6 +18842,10 @@ MonoBehaviour:
   CargoArrived4: 0
   CargoArrived5: 0
   CargoArrived6: 0
+  CargoArrived7: 0
+  CargoArrived8: 0
+  CargoArrived9: 0
+  CargoArrived10: 0
 --- !u!1 &1721256860
 GameObject:
   m_ObjectHideFlags: 0
@@ -19678,9 +19586,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Planet Six
-
-'
+  m_Text: Mukunga
 --- !u!222 &1774800708
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -19759,7 +19665,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Planet One
+  m_Text: 'Nova Skopjie
 
 '
 --- !u!222 &1785881157
@@ -21541,9 +21447,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Planet Two
-
-'
+  m_Text: Hetoo Prime
 --- !u!222 &1936779234
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -66,7 +66,6 @@
      <Compile Include="Assets\Scripts\menuu\OpenPlanetMenu.cs" />
      <Compile Include="Assets\Scripts\menuu\PlayerPlanetScript.cs" />
      <Compile Include="Assets\Scripts\menuu\RandomResources.cs" />
-     <Compile Include="Assets\Scripts\menuu\SendCargo.cs" />
      <Compile Include="Assets\Scripts\menuu\ShipBuilder.cs" />
      <Compile Include="Assets\Scripts\menuu\YouHaveScript.cs" />
      <Compile Include="Assets\Scripts\MouseOrbitImproved.cs" />

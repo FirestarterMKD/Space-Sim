@@ -53,26 +53,29 @@ public class MouseOrbitImproved : MonoBehaviour
 
         if (target)
         {
-            x += Input.GetAxis("Mouse X") * xSpeed * distance * 0.02f;
-            y -= Input.GetAxis("Mouse Y") * ySpeed * 0.02f;
+            
 
-            y = ClampAngle(y, yMinLimit, yMaxLimit);
+                x += Input.GetAxis("Mouse X") * xSpeed * distance * 0.02f;
+                y -= Input.GetAxis("Mouse Y") * ySpeed * 0.02f;
 
-            Quaternion rotation = Quaternion.Euler(y, x, 0);
+                y = ClampAngle(y, yMinLimit, yMaxLimit);
 
-            distance = Mathf.Clamp(distance - Input.GetAxis("Mouse ScrollWheel") * 5, distanceMin, distanceMax);
+                Quaternion rotation = Quaternion.Euler(y, x, 0);
 
-            RaycastHit hit;
-            if (Physics.Linecast(target.position, transform.position, out hit))
-            {
-                distance -= hit.distance;
+                distance = Mathf.Clamp(distance - Input.GetAxis("Mouse ScrollWheel") * 5, distanceMin, distanceMax);
+
+                RaycastHit hit;
+                if (Physics.Linecast(target.position, transform.position, out hit))
+                {
+                    distance -= hit.distance;
+                }
+                Vector3 negDistance = new Vector3(0.0f, 0.0f, -distance);
+                Vector3 position = rotation * negDistance + target.position + new Vector3(0, yOffset, 0);
+
+                transform.rotation = rotation;
+                transform.position = position;
             }
-            Vector3 negDistance = new Vector3(0.0f, 0.0f, -distance);
-            Vector3 position = rotation * negDistance + target.position + new Vector3(0, yOffset, 0);
-
-            transform.rotation = rotation;
-            transform.position = position;
-        }
+         
 
     }
 
