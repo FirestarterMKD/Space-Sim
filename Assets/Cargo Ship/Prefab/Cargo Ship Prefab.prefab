@@ -6480,7 +6480,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8938957029074714684}
   - component: {fileID: 8394165003714877176}
-  - component: {fileID: 9102864650734393860}
   m_Layer: 0
   m_Name: Cargo Ship Prefab
   m_TagString: Cargo
@@ -6534,28 +6533,6 @@ LODGroup:
     renderers:
     - renderer: {fileID: 3848762115880348744}
   m_Enabled: 1
---- !u!114 &9102864650734393860
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5356706122066309679}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c00333d7bf368e74aa9bd36889d24005, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerIron: 0
-  playerUranium: 0
-  speed: 15
-  maxIron: 5000
-  maxUranium: 1000
-  cargoIron: 0
-  cargoUranium: 0
-  cargoFuel: 50
-  minFuel: 1
-  maxFuel: 1000
 --- !u!1 &5545108850672582625
 GameObject:
   m_ObjectHideFlags: 0
