@@ -77,6 +77,7 @@
     <Compile Include="Assets\Scripts\menuu\ProbeController.cs" />
     <Compile Include="Assets\Scripts\menuu\RandomResources.cs" />
     <Compile Include="Assets\Scripts\menuu\ShipBuilder.cs" />
+    <Compile Include="Assets\Scripts\menuu\StartGame.cs" />
     <Compile Include="Assets\Scripts\menuu\YouHaveScript.cs" />
     <Compile Include="Assets\Scripts\MouseOrbitImproved.cs" />
     <Compile Include="Assets\Scripts\MouseRTS.cs" />
