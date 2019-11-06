@@ -38,8 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.00007322622, g: 0.00007524975, b: 0.00009980782,
-    a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5038,7 +5037,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bf2fc15f7ebc4b4ca5cfccfc2155dcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Possibility: 0
+  Iron: 0
+  Fuel: 0
+  Uranium: 0
 --- !u!114 &526509904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13246,7 +13247,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bf2fc15f7ebc4b4ca5cfccfc2155dcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Possibility: 0
+  Iron: 0
+  Fuel: 0
+  Uranium: 0
 --- !u!114 &1286292858
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16645,7 +16648,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bf2fc15f7ebc4b4ca5cfccfc2155dcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Possibility: 0
+  Iron: 0
+  Fuel: 0
+  Uranium: 0
 --- !u!114 &1580554924
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18197,7 +18202,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerStartIron: 15370
-  PlayerStartFuel: 50
+  PlayerStartFuel: 500
   PlayerStartUranium: 0
   PlayerStartCurrency: 0
   PlayerStartPower: 100
@@ -18474,6 +18479,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 150
+  Planet: {fileID: 1286292856}
   MyPlanet: {fileID: 1135995045}
   targetHome: {fileID: 1076155004}
   CargoArrived: 0
@@ -19801,7 +19807,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bf2fc15f7ebc4b4ca5cfccfc2155dcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Possibility: 0
+  Iron: 0
+  Fuel: 0
+  Uranium: 0
 --- !u!4 &1818220074 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6703095122648600375, guid: 6f570b1e22c5a0946b73698f2c7e945f,
@@ -20121,7 +20129,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bf2fc15f7ebc4b4ca5cfccfc2155dcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Possibility: 0
+  Iron: 0
+  Fuel: 0
+  Uranium: 0
 --- !u!114 &1841503773
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22348,7 +22358,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bf2fc15f7ebc4b4ca5cfccfc2155dcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Possibility: 0
+  Iron: 0
+  Fuel: 0
+  Uranium: 0
 --- !u!114 &2019340252
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24184,7 +24196,7 @@ PrefabInstance:
     - target: {fileID: 115758282479212373, guid: 37d6146dbc0b3c548869facde77fef67,
         type: 3}
       propertyPath: speed
-      value: 30
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 8622984663380623407, guid: 37d6146dbc0b3c548869facde77fef67,
         type: 3}

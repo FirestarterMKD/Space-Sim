@@ -22,17 +22,10 @@ public class PlayerPlanetScript : MonoBehaviour
 
     public static float second = 1;
 
-
-    
-
-
-    // Start is called before the first frame update
     void Start()
     {
         uranium -= 1;
     }
-
-    // Update is called once per frame
     void Update()
     {
         playerIronText.text = "IRON : " + iron;
@@ -47,8 +40,6 @@ public class PlayerPlanetScript : MonoBehaviour
         }
 
         second -= Time.deltaTime;
-
-        
 
         if (power < 2000)
         {
