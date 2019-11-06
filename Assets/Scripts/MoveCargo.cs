@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MoveCargo : MonoBehaviour
 {
-    public float speed = 15f;
+    public float speed = 200f;
     GameObject Planet;
     GameObject PlanetTwo;
     GameObject PlanetThree;
@@ -106,12 +106,19 @@ public class MoveCargo : MonoBehaviour
     {
         target = Planet.transform;
         float step = speed * Time.deltaTime;
-        transform.position = Vector3.MoveTowards(transform.position, target.position, step);
-
-        if (Vector3.Distance(transform.position, target.position) < 0.001f)
+        if (PlayerPlanetScript.fuel >= 10)
         {
-            PlayerPlanetScript.iron = PlayerPlanetScript.iron + 500;
-            CargoArrived = !CargoArrived;
+            transform.position = Vector3.MoveTowards(transform.position, target.position, step);
+
+            if (Vector3.Distance(transform.position, target.position) < 0.001f)
+            {
+                PlayerPlanetScript.iron = PlayerPlanetScript.iron + 500;
+                CargoArrived = !CargoArrived;
+            }
+        }
+        else
+        {
+            Debug.Log("Not enough fuel(10 for every trip)");
         }
 
     }
@@ -121,10 +128,19 @@ public class MoveCargo : MonoBehaviour
         float step = speed * Time.deltaTime;
         transform.position = Vector3.MoveTowards(transform.position, target.position, step);
 
-        if (Vector3.Distance(transform.position, target.position) < 0.001f)
+        if (PlayerPlanetScript.fuel >= 10)
         {
-            PlayerPlanetScript.iron = PlayerPlanetScript.iron + 500;
-            CargoArrived2 = !CargoArrived2;
+            transform.position = Vector3.MoveTowards(transform.position, target.position, step);
+
+            if (Vector3.Distance(transform.position, target.position) < 0.001f)
+            {
+                PlayerPlanetScript.iron = PlayerPlanetScript.iron + 500;
+                CargoArrived = !CargoArrived;
+            }
+        }
+        else
+        {
+            Debug.Log("Not enough fuel(10 for every trip)");
         }
     }
     void sendPlanet3()
@@ -133,10 +149,19 @@ public class MoveCargo : MonoBehaviour
         float step = speed * Time.deltaTime;
         transform.position = Vector3.MoveTowards(transform.position, target.position, step);
 
-        if (Vector3.Distance(transform.position, target.position) < 0.001f)
+        if (PlayerPlanetScript.fuel >= 10)
         {
-            PlayerPlanetScript.iron = PlayerPlanetScript.iron + 500;
-            CargoArrived3 = !CargoArrived3;
+            transform.position = Vector3.MoveTowards(transform.position, target.position, step);
+
+            if (Vector3.Distance(transform.position, target.position) < 0.001f)
+            {
+                PlayerPlanetScript.iron = PlayerPlanetScript.iron + 500;
+                CargoArrived = !CargoArrived;
+            }
+        }
+        else
+        {
+            Debug.Log("Not enough fuel(10 for every trip)");
         }
 
     }
@@ -146,10 +171,19 @@ public class MoveCargo : MonoBehaviour
         float step = speed * Time.deltaTime;
         transform.position = Vector3.MoveTowards(transform.position, target.position, step);
 
-        if (Vector3.Distance(transform.position, target.position) < 0.001f)
+        if (PlayerPlanetScript.fuel >= 10)
         {
-            PlayerPlanetScript.iron = PlayerPlanetScript.iron + 500;
-            CargoArrived4 = !CargoArrived4;
+            transform.position = Vector3.MoveTowards(transform.position, target.position, step);
+
+            if (Vector3.Distance(transform.position, target.position) < 0.001f)
+            {
+                PlayerPlanetScript.iron = PlayerPlanetScript.iron + 500;
+                CargoArrived = !CargoArrived;
+            }
+        }
+        else
+        {
+            Debug.Log("Not enough fuel(10 for every trip)");
         }
 
     }
@@ -159,10 +193,19 @@ public class MoveCargo : MonoBehaviour
         float step = speed * Time.deltaTime;
         transform.position = Vector3.MoveTowards(transform.position, target.position, step);
 
-        if (Vector3.Distance(transform.position, target.position) < 0.001f)
+        if (PlayerPlanetScript.fuel >= 10)
         {
-            PlayerPlanetScript.iron = PlayerPlanetScript.iron + 500;
-            CargoArrived5 = !CargoArrived5;
+            transform.position = Vector3.MoveTowards(transform.position, target.position, step);
+
+            if (Vector3.Distance(transform.position, target.position) < 0.001f)
+            {
+                PlayerPlanetScript.iron = PlayerPlanetScript.iron + 500;
+                CargoArrived = !CargoArrived;
+            }
+        }
+        else
+        {
+            Debug.Log("Not enough fuel(10 for every trip)");
         }
 
     }
@@ -172,10 +215,19 @@ public class MoveCargo : MonoBehaviour
         float step = speed * Time.deltaTime;
         transform.position = Vector3.MoveTowards(transform.position, target.position, step);
 
-        if (Vector3.Distance(transform.position, target.position) < 0.001f)
+        if (PlayerPlanetScript.fuel >= 10)
         {
-            PlayerPlanetScript.iron = PlayerPlanetScript.iron + 500;
-            CargoArrived6 = !CargoArrived6;
+            transform.position = Vector3.MoveTowards(transform.position, target.position, step);
+
+            if (Vector3.Distance(transform.position, target.position) < 0.001f)
+            {
+                PlayerPlanetScript.iron = PlayerPlanetScript.iron + 500;
+                CargoArrived = !CargoArrived;
+            }
+        }
+        else
+        {
+            Debug.Log("Not enough fuel(10 for every trip)");
         }
 
     }
@@ -185,10 +237,19 @@ public class MoveCargo : MonoBehaviour
         float step = speed * Time.deltaTime;
         transform.position = Vector3.MoveTowards(transform.position, target.position, step);
 
-        if (Vector3.Distance(transform.position, target.position) < 0.001f)
+        if (PlayerPlanetScript.fuel >= 10)
         {
-            PlayerPlanetScript.iron = PlayerPlanetScript.iron + 500;
-            CargoArrived7 = !CargoArrived7;
+            transform.position = Vector3.MoveTowards(transform.position, target.position, step);
+
+            if (Vector3.Distance(transform.position, target.position) < 0.001f)
+            {
+                PlayerPlanetScript.iron = PlayerPlanetScript.iron + 500;
+                CargoArrived = !CargoArrived;
+            }
+        }
+        else
+        {
+            Debug.Log("Not enough fuel(10 for every trip)");
         }
 
     }
@@ -198,10 +259,19 @@ public class MoveCargo : MonoBehaviour
         float step = speed * Time.deltaTime;
         transform.position = Vector3.MoveTowards(transform.position, target.position, step);
 
-        if (Vector3.Distance(transform.position, target.position) < 0.001f)
+        if (PlayerPlanetScript.fuel >= 10)
         {
-            PlayerPlanetScript.iron = PlayerPlanetScript.iron + 500;
-            CargoArrived8 = !CargoArrived8;
+            transform.position = Vector3.MoveTowards(transform.position, target.position, step);
+
+            if (Vector3.Distance(transform.position, target.position) < 0.001f)
+            {
+                PlayerPlanetScript.iron = PlayerPlanetScript.iron + 500;
+                CargoArrived = !CargoArrived;
+            }
+        }
+        else
+        {
+            Debug.Log("Not enough fuel(10 for every trip)");
         }
 
     }
@@ -211,10 +281,19 @@ public class MoveCargo : MonoBehaviour
         float step = speed * Time.deltaTime;
         transform.position = Vector3.MoveTowards(transform.position, target.position, step);
 
-        if (Vector3.Distance(transform.position, target.position) < 0.001f)
+        if (PlayerPlanetScript.fuel >= 10)
         {
-            PlayerPlanetScript.iron = PlayerPlanetScript.iron + 500;
-            CargoArrived9 = !CargoArrived9;
+            transform.position = Vector3.MoveTowards(transform.position, target.position, step);
+
+            if (Vector3.Distance(transform.position, target.position) < 0.001f)
+            {
+                PlayerPlanetScript.iron = PlayerPlanetScript.iron + 500;
+                CargoArrived = !CargoArrived;
+            }
+        }
+        else
+        {
+            Debug.Log("Not enough fuel(10 for every trip)");
         }
 
     }
@@ -223,11 +302,19 @@ public class MoveCargo : MonoBehaviour
         target = PlanetTen.transform;
         float step = speed * Time.deltaTime;
         transform.position = Vector3.MoveTowards(transform.position, target.position, step);
-
-        if (Vector3.Distance(transform.position, target.position) < 0.001f)
+        if (PlayerPlanetScript.fuel >= 10)
         {
-            PlayerPlanetScript.iron = PlayerPlanetScript.iron + 500;
-            CargoArrived10 = !CargoArrived10;
+            transform.position = Vector3.MoveTowards(transform.position, target.position, step);
+
+            if (Vector3.Distance(transform.position, target.position) < 0.001f)
+            {
+                PlayerPlanetScript.iron = PlayerPlanetScript.iron + 500;
+                CargoArrived = !CargoArrived;
+            }
+        }
+        else
+        {
+            Debug.Log("Not enough fuel(10 for every trip)");
         }
 
     }

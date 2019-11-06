@@ -20,6 +20,7 @@ public class Buildings : MonoBehaviour
     public Text SolarPlantLvlTxt;
     public Text RefinaryLvlTxt;
     public Text NuclearReactorLvlTxt;
+
     void Start()
     {
 

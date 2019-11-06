@@ -65,6 +65,7 @@
   <ItemGroup>
     <Compile Include="Assets\mouse.cs" />
     <Compile Include="Assets\Scripts\CameraSwitch.cs" />
+    <Compile Include="Assets\Scripts\Fuel.cs" />
     <Compile Include="Assets\Scripts\MaterialSwap.cs" />
     <Compile Include="Assets\Scripts\menuu\Buildings.cs" />
     <Compile Include="Assets\Scripts\menuu\ClickMenu.cs" />

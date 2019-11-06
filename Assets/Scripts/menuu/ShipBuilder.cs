@@ -21,6 +21,9 @@ public class ShipBuilder : MonoBehaviour
     public static int CargoCostPower = 10;
     public static int ScoutCostPower = 5;
 
+
+    private int Shipyardlvl = 0;
+
     void Start()
     {
 
@@ -28,7 +31,8 @@ public class ShipBuilder : MonoBehaviour
     public void clickBuyCargo()
     {   
         int.TryParse(quantity.text, out valueCargo);
-        if (Buildings.ShipYard > 2)
+        Shipyardlvl = Buildings.ShipYard;
+        if (Shipyardlvl >= 2)
         {
             if (valueCargo > 0)
             {
@@ -61,7 +65,8 @@ public class ShipBuilder : MonoBehaviour
     public void clickBuyScout()
     {
         int.TryParse(quantity.text, out valueScout);
-        if (Buildings.ShipYard > 2)
+        Shipyardlvl = Buildings.ShipYard;
+        if (Shipyardlvl >= 1)
         {
             if (valueScout > 0)
             {

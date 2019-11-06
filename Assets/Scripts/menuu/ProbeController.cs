@@ -30,6 +30,8 @@ public class ProbeController : MonoBehaviour
     public bool arrived5 = true;
     public bool arrived6 = true;
 
+    public bool sent = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -84,34 +86,43 @@ public class ProbeController : MonoBehaviour
     {
         target = Planet.transform;
         float step = speed * Time.deltaTime;
-        transform.position = Vector3.MoveTowards(transform.position, target.position, step);
-        
-        if (Vector3.Distance(transform.position, target.position) < 0.001f)
+        if (PlayerPlanetScript.fuel >= 10)
         {
-            canvasObject1.SetActive(true);
-            canvasObject2.SetActive(false);
-            canvasObject3.SetActive(false);
-            canvasObject4.SetActive(false);
-            canvasObject5.SetActive(false);
-            canvasObject6.SetActive(false); 
-            arrived = !arrived;
-        }
+            transform.position = Vector3.MoveTowards(transform.position, target.position, step);
 
-        if (Vector3.Distance(transform.position, target.position) > 0.005f)
-        {
-            canvasObject1.SetActive(false);
-            canvasObject2.SetActive(false);
-            canvasObject3.SetActive(false);
-            canvasObject4.SetActive(false);
-            canvasObject5.SetActive(false);
-            canvasObject6.SetActive(false); 
+            if (Vector3.Distance(transform.position, target.position) < 0.001f)
+            {
+                canvasObject1.SetActive(true);
+                canvasObject2.SetActive(false);
+                canvasObject3.SetActive(false);
+                canvasObject4.SetActive(false);
+                canvasObject5.SetActive(false);
+                canvasObject6.SetActive(false);
+                arrived = !arrived;
+            }
+
+            if (Vector3.Distance(transform.position, target.position) > 0.005f)
+            {
+                canvasObject1.SetActive(false);
+                canvasObject2.SetActive(false);
+                canvasObject3.SetActive(false);
+                canvasObject4.SetActive(false);
+                canvasObject5.SetActive(false);
+                canvasObject6.SetActive(false);
+            }
         }
+        else
+        {
+            Debug.Log("Not enough fuel (10 for every trip)");
+        }
+        
     }
 
     void checkPlanet2()
     {
         target = PlanetTwo.transform;
         float step = speed * Time.deltaTime;
+        PlayerPlanetScript.fuel -= 10;
         transform.position = Vector3.MoveTowards(transform.position, target.position, step);
 
         if (Vector3.Distance(transform.position, target.position) < 0.001f)
@@ -140,6 +151,7 @@ public class ProbeController : MonoBehaviour
     {
         target = PlanetThree.transform;
         float step = speed * Time.deltaTime;
+        PlayerPlanetScript.fuel -= 10;
         transform.position = Vector3.MoveTowards(transform.position, target.position, step);
 
             if (Vector3.Distance(transform.position, target.position) < 0.001f)
@@ -168,7 +180,8 @@ public class ProbeController : MonoBehaviour
     {
         target = PlanetFour.transform;
         float step = speed * Time.deltaTime;
-            transform.position = Vector3.MoveTowards(transform.position, target.position, step);
+        PlayerPlanetScript.fuel -= 10;
+        transform.position = Vector3.MoveTowards(transform.position, target.position, step);
 
             if (Vector3.Distance(transform.position, target.position) < 0.001f)
             {
@@ -197,7 +210,8 @@ public class ProbeController : MonoBehaviour
     {
         target = PlanetFive.transform;
         float step = speed * Time.deltaTime;
-            transform.position = Vector3.MoveTowards(transform.position, target.position, step);
+        PlayerPlanetScript.fuel -= 10;
+        transform.position = Vector3.MoveTowards(transform.position, target.position, step);
 
             if (Vector3.Distance(transform.position, target.position) < 0.001f)
             {
@@ -225,6 +239,7 @@ public class ProbeController : MonoBehaviour
     {
         target = PlanetSix.transform;
         float step = speed * Time.deltaTime;
+        PlayerPlanetScript.fuel -= 10;
         transform.position = Vector3.MoveTowards(transform.position, target.position, step);
 
             if (Vector3.Distance(transform.position, target.position) < 0.002f)
@@ -252,6 +267,7 @@ public class ProbeController : MonoBehaviour
     {
         target = PlanetSeven.transform;
         float step = speed * Time.deltaTime;
+        PlayerPlanetScript.fuel -= 10;
         transform.position = Vector3.MoveTowards(transform.position, target.position, step);
 
             if (Vector3.Distance(transform.position, target.position) < 0.002f)
