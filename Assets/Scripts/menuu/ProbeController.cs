@@ -122,7 +122,6 @@ public class ProbeController : MonoBehaviour
     {
         target = PlanetTwo.transform;
         float step = speed * Time.deltaTime;
-        PlayerPlanetScript.fuel -= 10;
         transform.position = Vector3.MoveTowards(transform.position, target.position, step);
 
         if (Vector3.Distance(transform.position, target.position) < 0.001f)
@@ -151,7 +150,6 @@ public class ProbeController : MonoBehaviour
     {
         target = PlanetThree.transform;
         float step = speed * Time.deltaTime;
-        PlayerPlanetScript.fuel -= 10;
         transform.position = Vector3.MoveTowards(transform.position, target.position, step);
 
             if (Vector3.Distance(transform.position, target.position) < 0.001f)
@@ -180,7 +178,6 @@ public class ProbeController : MonoBehaviour
     {
         target = PlanetFour.transform;
         float step = speed * Time.deltaTime;
-        PlayerPlanetScript.fuel -= 10;
         transform.position = Vector3.MoveTowards(transform.position, target.position, step);
 
             if (Vector3.Distance(transform.position, target.position) < 0.001f)
@@ -210,7 +207,6 @@ public class ProbeController : MonoBehaviour
     {
         target = PlanetFive.transform;
         float step = speed * Time.deltaTime;
-        PlayerPlanetScript.fuel -= 10;
         transform.position = Vector3.MoveTowards(transform.position, target.position, step);
 
             if (Vector3.Distance(transform.position, target.position) < 0.001f)
@@ -239,7 +235,6 @@ public class ProbeController : MonoBehaviour
     {
         target = PlanetSix.transform;
         float step = speed * Time.deltaTime;
-        PlayerPlanetScript.fuel -= 10;
         transform.position = Vector3.MoveTowards(transform.position, target.position, step);
 
             if (Vector3.Distance(transform.position, target.position) < 0.002f)
@@ -267,7 +262,6 @@ public class ProbeController : MonoBehaviour
     {
         target = PlanetSeven.transform;
         float step = speed * Time.deltaTime;
-        PlayerPlanetScript.fuel -= 10;
         transform.position = Vector3.MoveTowards(transform.position, target.position, step);
 
             if (Vector3.Distance(transform.position, target.position) < 0.002f)

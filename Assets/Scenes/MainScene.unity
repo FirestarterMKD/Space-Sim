@@ -18473,7 +18473,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c366fd2d95d92745b20bd45144af214, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
+  speed: 150
+  MyPlanet: {fileID: 1135995045}
+  targetHome: {fileID: 1076155004}
   CargoArrived: 0
   CargoArrived2: 0
   CargoArrived3: 0

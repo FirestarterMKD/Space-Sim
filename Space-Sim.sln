@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
+# Visual Studio 16
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{1F044066-8576-3F16-4DCA-A956A785E06B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TexturePacker.Runtime", "TexturePacker.Runtime.csproj", "{E7E7DEB1-FA52-2E4F-00AA-017E6BCE921D}"
