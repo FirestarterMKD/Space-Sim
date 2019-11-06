@@ -235,6 +235,8 @@ public class MoveCargo : MonoBehaviour
                             Capacity -= Capacity;
                         }
                         CargoArrived2 = true;
+
+                        Capacity = 3000;
                     }
                 }
                 else
@@ -353,7 +355,7 @@ public class MoveCargo : MonoBehaviour
                             else
                             {
                                 PlayerPlanetScript.iron = PlayerPlanetScript.iron + Capacity;
-                                RandomResources.randomIron = RandomResources.randomIron - Capacity;
+                                RandomResources.randomRawFuel = RandomResources.randomRawFuel - Capacity;
                                 Capacity -= Capacity;
                             }
                         }

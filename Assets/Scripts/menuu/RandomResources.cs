@@ -4,10 +4,10 @@ using UnityEngine;
 using UnityEngine.UI;
 public class RandomResources : MonoBehaviour
 {
-    public static int randomIron;
-    public static int randomRawFuel;
-    public static int randomUranium;
-    public static int Possibility;
+    private static int randomIron;
+    private static int randomRawFuel;
+    private static int randomUranium;
+    private static int Possibility;
 
     public int Iron;
     public int Fuel;
@@ -39,11 +39,11 @@ public class RandomResources : MonoBehaviour
     void Update()
     {
         Text ironText = GameObject.Find(gameObject.name + "/IronTxt").GetComponent<Text>();
-        ironText.text = "Iron: " + Iron;
+        ironText.text = "Iron: " + randomIron;
         Text fuelText = GameObject.Find(gameObject.name + "/FuelText").GetComponent<Text>();
-        fuelText.text = "Raw Fuel: " + Fuel;
+        fuelText.text = "Raw Fuel: " + randomRawFuel;
         Text UraniumText = GameObject.Find(gameObject.name + "/UraniumText").GetComponent<Text>();
-        UraniumText.text = "Uranium: " + Uranium;
+        UraniumText.text = "Uranium: " + randomUranium;
 
     }
 }
