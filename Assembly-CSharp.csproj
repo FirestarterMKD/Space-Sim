@@ -73,6 +73,7 @@
     <Compile Include="Assets\Scripts\menuu\MyPlanetLook.cs" />
     <Compile Include="Assets\Scripts\menuu\OpenPlanetMenu.cs" />
     <Compile Include="Assets\Scripts\menuu\PlayerPlanetScript.cs" />
+    <Compile Include="Assets\Scripts\menuu\ProbeController.cs" />
     <Compile Include="Assets\Scripts\menuu\RandomResources.cs" />
     <Compile Include="Assets\Scripts\menuu\ShipBuilder.cs" />
     <Compile Include="Assets\Scripts\menuu\YouHaveScript.cs" />
@@ -91,7 +92,6 @@
     <Compile Include="Assets\Scripts\OrbitPlanetThree.cs" />
     <Compile Include="Assets\Scripts\OrbitPlanetTwo.cs" />
     <Compile Include="Assets\Scripts\OrbitSun.cs" />
-    <Compile Include="Assets\Scripts\ProbeController.cs" />
     <Compile Include="Assets\Scripts\Rotation.cs" />
     <Compile Include="Assets\Scripts\RotationAtmo.cs" />
     <Compile Include="Assets\Scripts\Sounds.cs" />

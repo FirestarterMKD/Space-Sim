@@ -7,14 +7,27 @@ public class RandomResources : MonoBehaviour
     private int randomIron;
     private int randomRawFuel;
     private int randomUranium;
+    public int Possibility;
 
-    
+
+
+
 
     void Start()
     {
-        randomIron = Random.Range(10, 1000);
+
+        Possibility = Random.Range(1, 100);
+        randomIron = Random.Range(500, 12000);
         randomRawFuel = Random.Range(10, 200);
-        randomUranium = Random.Range(0, 50);
+
+        if (Possibility > 80)
+        {
+            randomUranium = Random.Range(0, 50);
+        }
+        else
+        {
+            randomUranium = 0;
+        }
 
         Text ironText = GameObject.Find(gameObject.name + "/IronTxt").GetComponent<Text>();
         ironText.text = "Iron: " + randomIron;

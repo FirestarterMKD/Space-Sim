@@ -8,7 +8,7 @@ public class Buildings : MonoBehaviour
     // Start is called before the first frame update
     public int SolarPlant = 0;
     public int NuclearReactor = 0;
-    public int ShipYard = 0;
+    public static int ShipYard = 0;
     public int Refinery = 0;
 
     public int CostShipYard = 1000;
@@ -54,7 +54,7 @@ public class Buildings : MonoBehaviour
             SolarPlant++;
             PlayerPlanetScript.iron = PlayerPlanetScript.iron - CostSolarPlant;
             CostSolarPlant = CostSolarPlant * 4;
-            PlayerPlanetScript.MultiplyMode -= 5;
+            PlayerPlanetScript.MultiplyMode -= 2;
         }
         else
         {

@@ -28,49 +28,64 @@ public class ShipBuilder : MonoBehaviour
     public void clickBuyCargo()
     {   
         int.TryParse(quantity.text, out valueCargo);
-        if (valueCargo > 0)
+        if (Buildings.ShipYard > 2)
         {
-
-            if (PlayerPlanetScript.iron >= (CargoCostIron * valueCargo))
+            if (valueCargo > 0)
             {
-                Debug.Log(valueCargo + " cargo started building");
-                currentQuantityCargo += valueCargo;
-                currentTextCargo = currentQuantityCargo.ToString();
-                PlayerPlanetScript.iron -= (CargoCostIron * valueCargo);
-                PlayerPlanetScript.MultiplyMode += (currentQuantityCargo * CargoCostPower);
+
+                if (PlayerPlanetScript.iron >= (CargoCostIron * valueCargo))
+                {
+                    Debug.Log(valueCargo + " cargo started building");
+                    currentQuantityCargo += valueCargo;
+                    currentTextCargo = currentQuantityCargo.ToString();
+                    PlayerPlanetScript.iron -= (CargoCostIron * valueCargo);
+                    PlayerPlanetScript.MultiplyMode += (currentQuantityCargo * CargoCostPower);
+                }
+                else
+                {
+                    Debug.Log("Not Enough Resources");
+                }
             }
             else
             {
-                Debug.Log("Not Enough Resources");
+                Debug.Log("The number you entered should be positive.");
             }
         }
         else
         {
-            Debug.Log("The number you entered should be positive.");
+            Debug.Log("Shipyard Should be 2");
         }
+        
         
     }
     public void clickBuyScout()
     {
         int.TryParse(quantity.text, out valueScout);
-        if (valueScout > 0)
+        if (Buildings.ShipYard > 2)
         {
-            if (PlayerPlanetScript.iron >= (ScoutCostIron * valueScout))
+            if (valueScout > 0)
             {
-                Debug.Log(valueScout + " scout started building");
-                currentQuantityScout += valueScout;
-                currentTextScout = currentQuantityScout.ToString();
-                PlayerPlanetScript.iron -= (ScoutCostIron * valueScout);
-                PlayerPlanetScript.MultiplyMode += (valueScout * ScoutCostPower);
+                if (PlayerPlanetScript.iron >= (ScoutCostIron * valueScout))
+                {
+                    Debug.Log(valueScout + " scout started building");
+                    currentQuantityScout += valueScout;
+                    currentTextScout = currentQuantityScout.ToString();
+                    PlayerPlanetScript.iron -= (ScoutCostIron * valueScout);
+                    PlayerPlanetScript.MultiplyMode += (valueScout * ScoutCostPower);
+                }
+                else
+                {
+                    Debug.Log("Not Enough Resources");
+                }
             }
             else
             {
-                Debug.Log("Not Enough Resources");
+                Debug.Log("The number you entered should be positive.");
             }
         }
         else
         {
-            Debug.Log("The number you entered should be positive.");
+            Debug.Log("Shipyard Should be 1");
         }
 
     }
