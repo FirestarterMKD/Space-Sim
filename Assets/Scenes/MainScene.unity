@@ -5654,7 +5654,6 @@ GameObject:
   - component: {fileID: 535454282}
   - component: {fileID: 535454281}
   - component: {fileID: 535454280}
-  - component: {fileID: 535454279}
   m_Layer: 5
   m_Name: SendScout
   m_TagString: Untagged
@@ -5682,18 +5681,6 @@ RectTransform:
   m_AnchoredPosition: {x: 368, y: -170.2}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &535454279
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 535454277}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dfd5189c24736504f832cd1f342ab5a3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &535454280
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8981,7 +8968,6 @@ GameObject:
   - component: {fileID: 819137960}
   - component: {fileID: 819137959}
   - component: {fileID: 819137958}
-  - component: {fileID: 819137957}
   m_Layer: 5
   m_Name: SendScout
   m_TagString: Untagged
@@ -9009,18 +8995,6 @@ RectTransform:
   m_AnchoredPosition: {x: 368, y: -170.2}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &819137957
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 819137955}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dfd5189c24736504f832cd1f342ab5a3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &819137958
 MonoBehaviour:
   m_ObjectHideFlags: 0
