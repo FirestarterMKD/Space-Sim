@@ -34,6 +34,19 @@ public class PlayerPlanetScript : MonoBehaviour
         //playerCurrencyText.text = "CURRENCY : " + currency;
         playerPowerText.text = "POWER : " + power + " Gen(" + (MultiplyMode * -1) +")";
 
+        if (MultiplyMode > 0)
+        {
+            playerPowerText.GetComponent<Text>().color = Color.red;
+        }
+        if (MultiplyMode == 0)
+        {
+            playerPowerText.GetComponent<Text>().color = Color.yellow;
+        }
+        if (MultiplyMode < 0)
+        {
+            playerPowerText.GetComponent<Text>().color = Color.green;
+        }
+
         if ( fuel < 1)
         {
             fuel = 0;

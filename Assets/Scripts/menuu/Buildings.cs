@@ -82,10 +82,9 @@ public class Buildings : MonoBehaviour
         if (PlayerPlanetScript.uranium >= CostNuclearReactor)
         {
             NuclearReactor++;
-            PlayerPlanetScript.iron = PlayerPlanetScript.iron - CostNuclearReactor;
-            CostNuclearReactor = CostNuclearReactor * 2;
+            PlayerPlanetScript.uranium = PlayerPlanetScript.uranium - CostNuclearReactor;
 
-            PlayerPlanetScript.MultiplyMode -= 50;
+            PlayerPlanetScript.power += 50;
         }
         else
         {

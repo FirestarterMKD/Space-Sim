@@ -20,10 +20,17 @@ public class RandomResources : MonoBehaviour
     {
 
         Possibility = Random.Range(1, 100);
-        randomIron = Random.Range(500, 12000);
-        randomRawFuel = Random.Range(0, 20);
+        if(Possibility < 31)
+        {
+            randomIron = Random.Range(500, 50000);
+        }
+        else
+        {
+            randomIron = Random.Range(50, 12000);
+        }
+        randomRawFuel = Random.Range(0, 100);
 
-        if (Possibility > 80)
+        if (Possibility > 49)
         {
             randomUranium = Random.Range(0, 500);
         }

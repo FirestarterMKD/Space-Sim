@@ -6,12 +6,12 @@ using UnityEngine;
 public class targetswapper : MonoBehaviour
 {
     public MouseOrbitImproved mouseOrbitImprovedTarget;
-    GameObject planetOne;
-    GameObject PlanetTwo;
-    GameObject PlanetThree;
-    GameObject PlanetFour;
-    GameObject PlanetFive;
-    GameObject PlanetSix;
+    public GameObject planetOne;
+    public GameObject PlanetTwo;
+    public GameObject PlanetThree;
+    public GameObject PlanetFour;
+    public GameObject PlanetFive;
+    public GameObject PlanetSix;
     GameObject PlanetSeven;
     GameObject PlanetEight;
     GameObject PlanetNine;
@@ -24,12 +24,12 @@ public class targetswapper : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        planetOne = GameObject.FindWithTag("PlanetOne");
+        /*planetOne = GameObject.FindWithTag("PlanetOne");
         PlanetTwo = GameObject.FindWithTag("PlanetTwo");
         PlanetThree = GameObject.FindWithTag("PlanetThree");
         PlanetFour = GameObject.FindWithTag("PlanetFour");
         PlanetFive = GameObject.FindWithTag("PlanetFive");
-        PlanetSix = GameObject.FindWithTag("PlanetSix");
+        PlanetSix = GameObject.FindWithTag("PlanetSix");*/
         PlanetSeven = GameObject.FindWithTag("PlanetSeven");
         PlanetEight = GameObject.Find("ColliderGasGiantOne");
         PlanetNine = GameObject.Find("ColliderGasGiantTwo");

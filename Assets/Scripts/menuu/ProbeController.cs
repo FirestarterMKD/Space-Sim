@@ -13,13 +13,13 @@ public class ProbeController : MonoBehaviour
     public GameObject canvasObject6;
 
     public float speed = 15f;
-    GameObject Planet;
-    GameObject PlanetTwo;
-    GameObject PlanetThree;
-    GameObject PlanetFour;
-    GameObject PlanetFive;
-    GameObject PlanetSix;
-    GameObject PlanetSeven;
+    public GameObject Planet;
+    public GameObject PlanetTwo;
+    public GameObject PlanetThree;
+    public GameObject PlanetFour;
+    public GameObject PlanetFive;
+    public GameObject PlanetSix;
+    public GameObject PlanetSeven;
 
     private Transform target;
 
@@ -36,13 +36,13 @@ public class ProbeController : MonoBehaviour
     void Start()
     {
 
-        Planet = GameObject.FindWithTag("PlanetOne");
+        /*Planet = GameObject.FindWithTag("PlanetOne");
         PlanetTwo = GameObject.FindWithTag("PlanetTwo");
         PlanetThree = GameObject.FindWithTag("PlanetThree");
         PlanetFour = GameObject.FindWithTag("PlanetFour");
         PlanetFive = GameObject.FindWithTag("PlanetFive");
         PlanetSix = GameObject.FindWithTag("PlanetSix");
-        PlanetSeven = GameObject.FindWithTag("PlanetSeven");
+        PlanetSeven = GameObject.FindWithTag("PlanetSeven");*/
 
         canvasObject1.SetActive(false);
         canvasObject2.SetActive(false);

@@ -35,7 +35,8 @@ public class MoveCargo : MonoBehaviour
     public bool CargoArrived9;
     public bool CargoArrived10;
 
-    public static int Capacity = 3000;
+    public static int Capacity = 0;
+    public static int CapacityUp = 2000;
 
     int Iron1;
 
@@ -111,7 +112,7 @@ public class MoveCargo : MonoBehaviour
 
         if (CargoArrived == true & CargoArrived2 == true & CargoArrived3 == true & CargoArrived4 == true & CargoArrived5 == true & CargoArrived6 == true & CargoArrived7 == true)
         {
-            transform.position = Vector3.MoveTowards(transform.position, targetHome.position, 250f *  Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, targetHome.position, 50f *  Time.deltaTime);
         }
 
     }
@@ -125,6 +126,7 @@ public class MoveCargo : MonoBehaviour
         {
             if (Capacity > 0)
             {
+                Debug.Log(Capacity);
                 if (PlayerPlanetScript.fuel >= 10)
                 {
                     transform.position = Vector3.MoveTowards(transform.position, target.position, step);
@@ -165,13 +167,13 @@ public class MoveCargo : MonoBehaviour
                         }
                         else
                         {
-                            PlayerPlanetScript.iron = PlayerPlanetScript.iron + 3000;
-                            Planet.GetComponent<RandomResources>().randomIron = Planet.GetComponent<RandomResources>().randomIron - 3000;
+                            PlayerPlanetScript.iron = PlayerPlanetScript.iron + Capacity;
+                            Planet.GetComponent<RandomResources>().randomIron = Planet.GetComponent<RandomResources>().randomIron - Capacity;
                             Capacity -= Capacity;
                         }
 
                         CargoArrived = true;
-                        Capacity = 3000;
+                        Capacity = CapacityUp;
                     }
                 }
                 else
@@ -191,6 +193,8 @@ public class MoveCargo : MonoBehaviour
         {
             if (Capacity > 0)
             {
+
+                Debug.Log(Capacity);
                 if (PlayerPlanetScript.fuel >= 10)
                 {
                     transform.position = Vector3.MoveTowards(transform.position, target.position, step);
@@ -231,13 +235,13 @@ public class MoveCargo : MonoBehaviour
                         }
                         else
                         {
-                            PlayerPlanetScript.iron = PlayerPlanetScript.iron + 3000;
-                            PlanetTwo.GetComponent<RandomResources>().randomIron = PlanetTwo.GetComponent<RandomResources>().randomIron - 3000;
+                            PlayerPlanetScript.iron = PlayerPlanetScript.iron + Capacity;
+                            PlanetTwo.GetComponent<RandomResources>().randomIron = PlanetTwo.GetComponent<RandomResources>().randomIron - Capacity;
                             Capacity -= Capacity;
                         }
 
                         CargoArrived2 = true;
-                        Capacity = 3000;
+                        Capacity = CapacityUp;
                     }
                 }
                 else
@@ -296,13 +300,13 @@ public class MoveCargo : MonoBehaviour
                         }
                         else
                         {
-                            PlayerPlanetScript.iron = PlayerPlanetScript.iron + 3000;
-                            PlanetThree.GetComponent<RandomResources>().randomIron = PlanetThree.GetComponent<RandomResources>().randomIron - 3000;
+                            PlayerPlanetScript.iron = PlayerPlanetScript.iron + Capacity;
+                            PlanetThree.GetComponent<RandomResources>().randomIron = PlanetThree.GetComponent<RandomResources>().randomIron - Capacity;
                             Capacity -= Capacity;
                         }
 
                         CargoArrived3 = true;
-                        Capacity = 3000;
+                        Capacity = CapacityUp;
                     }
                 }
                 else
@@ -362,13 +366,13 @@ public class MoveCargo : MonoBehaviour
                         }
                         else
                         {
-                            PlayerPlanetScript.iron = PlayerPlanetScript.iron + 3000;
-                            PlanetFour.GetComponent<RandomResources>().randomIron = PlanetFour.GetComponent<RandomResources>().randomIron - 3000;
+                            PlayerPlanetScript.iron = PlayerPlanetScript.iron + Capacity;
+                            PlanetFour.GetComponent<RandomResources>().randomIron = PlanetFour.GetComponent<RandomResources>().randomIron - Capacity;
                             Capacity -= Capacity;
                         }
 
                         CargoArrived4 = true;
-                        Capacity = 3000;
+                        Capacity = CapacityUp;
                     }
                 }
                 else
@@ -428,13 +432,13 @@ public class MoveCargo : MonoBehaviour
                         }
                         else
                         {
-                            PlayerPlanetScript.iron = PlayerPlanetScript.iron + 3000;
-                            PlanetFive.GetComponent<RandomResources>().randomIron = PlanetFive.GetComponent<RandomResources>().randomIron - 3000;
+                            PlayerPlanetScript.iron = PlayerPlanetScript.iron + Capacity;
+                            PlanetFive.GetComponent<RandomResources>().randomIron = PlanetFive.GetComponent<RandomResources>().randomIron - Capacity;
                             Capacity -= Capacity;
                         }
 
                         CargoArrived5 = true;
-                        Capacity = 3000;
+                        Capacity = CapacityUp;
                     }
                 }
                 else
@@ -494,13 +498,13 @@ public class MoveCargo : MonoBehaviour
                         }
                         else
                         {
-                            PlayerPlanetScript.iron = PlayerPlanetScript.iron + 3000;
-                            PlanetSix.GetComponent<RandomResources>().randomIron = PlanetSix.GetComponent<RandomResources>().randomIron - 3000;
+                            PlayerPlanetScript.iron = PlayerPlanetScript.iron + Capacity;
+                            PlanetSix.GetComponent<RandomResources>().randomIron = PlanetSix.GetComponent<RandomResources>().randomIron - Capacity;
                             Capacity -= Capacity;
                         }
 
                         CargoArrived6 = true;
-                        Capacity = 3000;
+                        Capacity = CapacityUp;
                     }
                 }
                 else
@@ -560,13 +564,13 @@ public class MoveCargo : MonoBehaviour
                         }
                         else
                         {
-                            PlayerPlanetScript.iron = PlayerPlanetScript.iron + 3000;
-                            PlanetSeven.GetComponent<RandomResources>().randomIron = PlanetSeven.GetComponent<RandomResources>().randomIron - 3000;
+                            PlayerPlanetScript.iron = PlayerPlanetScript.iron + Capacity;
+                            PlanetSeven.GetComponent<RandomResources>().randomIron = PlanetSeven.GetComponent<RandomResources>().randomIron - Capacity;
                             Capacity -= Capacity;
                         }
 
                         CargoArrived7 = true;
-                        Capacity = 3000;
+                        Capacity = CapacityUp;
                     }
                 }
                 else

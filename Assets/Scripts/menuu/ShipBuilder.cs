@@ -6,8 +6,19 @@ using UnityEngine.UI;
 public class ShipBuilder : MonoBehaviour
 {
     public InputField quantity;
+
+    public InputField cargoAmount1;
+    public InputField cargoAmount2;
+    public InputField cargoAmount3;
+    public InputField cargoAmount4;
+    public InputField cargoAmount5;
+    public InputField cargoAmount6;
+
     public static int valueCargo;
     public static int valueScout;
+
+    public static int amount;
+
 
     public static int currentQuantityCargo = 0;
     public static int currentQuantityScout = 0;
@@ -26,7 +37,7 @@ public class ShipBuilder : MonoBehaviour
 
     void Start()
     {
-
+        amount = 1;
     }
     public void clickBuyCargo()
     {   
@@ -44,6 +55,9 @@ public class ShipBuilder : MonoBehaviour
                     currentTextCargo = currentQuantityCargo.ToString();
                     PlayerPlanetScript.iron -= (CargoCostIron * valueCargo);
                     PlayerPlanetScript.MultiplyMode += (currentQuantityCargo * CargoCostPower);
+                    MoveCargo.Capacity  += (2000 * valueCargo);
+                    MoveCargo.CapacityUp = MoveCargo.Capacity;
+
                 }
                 else
                 {
@@ -93,5 +107,35 @@ public class ShipBuilder : MonoBehaviour
             Debug.Log("Shipyard Should be 1");
         }
 
+    }
+    public void attackbutton1()
+    {
+        int.TryParse(cargoAmount1.text, out amount);
+        Debug.Log(amount);
+    }
+    public void attackbutton2()
+    {
+        int.TryParse(cargoAmount2.text, out amount);
+        Debug.Log(amount);
+    }
+    public void attackbutton3()
+    {
+        int.TryParse(cargoAmount3.text, out amount);
+        Debug.Log(amount);
+    }
+    public void attackbutton4()
+    {
+        int.TryParse(cargoAmount4.text, out amount);
+        Debug.Log(amount);
+    }
+    public void attackbutton5()
+    {
+        int.TryParse(cargoAmount5.text, out amount);
+        Debug.Log(amount);
+    }
+    public void attackbutton6()
+    {
+        int.TryParse(cargoAmount6.text, out amount);
+        Debug.Log(amount);
     }
 }
