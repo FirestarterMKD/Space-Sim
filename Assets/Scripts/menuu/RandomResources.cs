@@ -44,7 +44,7 @@ public class RandomResources : MonoBehaviour
         ironText.text = "Iron: " + randomIron;
 
         Text FuelText = canvas.transform.GetChild(1).GetComponent<Text>();
-        FuelText.text = "Uranium: " + randomRawFuel;
+        FuelText.text = "Fuel: " + randomRawFuel;
 
         Text uraniumText = canvas.transform.GetChild(2).GetComponent<Text>();
         uraniumText.text = "Uranium: " + randomUranium;
