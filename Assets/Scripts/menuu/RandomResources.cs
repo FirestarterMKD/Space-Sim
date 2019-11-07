@@ -26,7 +26,7 @@ public class RandomResources : MonoBehaviour
         }
         else
         {
-            randomIron = Random.Range(50, 12000);
+            randomIron = Random.Range(50, 10000);
         }
         randomRawFuel = Random.Range(0, 100);
 
