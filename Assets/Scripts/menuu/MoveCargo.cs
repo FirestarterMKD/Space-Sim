@@ -7,15 +7,15 @@ public class MoveCargo : MonoBehaviour
 {
     public float speed = 500f;
     public GameObject Planet;
-    GameObject PlanetTwo;
-    GameObject PlanetThree;
-    GameObject PlanetFour;
-    GameObject PlanetFive;
-    GameObject PlanetSix;
-    GameObject PlanetSeven;
-    GameObject PlanetEight;
-    GameObject PlanetNine;
-    GameObject PlanetTen;
+    public GameObject PlanetTwo;
+    public GameObject PlanetThree;
+    public GameObject PlanetFour;
+    public GameObject PlanetFive;
+    public GameObject PlanetSix;
+    public GameObject PlanetSeven;
+    public GameObject PlanetEight;
+    public GameObject PlanetNine;
+    public GameObject PlanetTen;
 
     public GameObject MyPlanet;
 
@@ -38,9 +38,10 @@ public class MoveCargo : MonoBehaviour
     public static int Capacity = 3000;
 
     int Iron1;
+
     void Start()
     {
-        Planet = GameObject.FindWithTag("PlanetOne");
+       /* Planet = GameObject.FindWithTag("PlanetOne");
         PlanetTwo = GameObject.FindWithTag("PlanetTwo");
         PlanetThree = GameObject.FindWithTag("PlanetThree");
         PlanetFour = GameObject.FindWithTag("PlanetFour");
@@ -49,7 +50,7 @@ public class MoveCargo : MonoBehaviour
         PlanetSeven = GameObject.FindWithTag("PlanetSeven");
         PlanetEight = GameObject.Find("ColliderGasGiantOne");
         PlanetNine = GameObject.Find("ColliderGasGiantTwo");
-        PlanetTen = GameObject.Find("ColliderGasGiantThree");
+        PlanetTen = GameObject.Find("ColliderGasGiantThree"); */
 
         CargoArrived = true;
         CargoArrived2 = true;
@@ -62,8 +63,8 @@ public class MoveCargo : MonoBehaviour
         CargoArrived9 = true;
         CargoArrived10 = true;
 
-        
-    }
+
+}
 
     void Update()
     {
@@ -130,42 +131,42 @@ public class MoveCargo : MonoBehaviour
 
                     if (Vector3.Distance(transform.position, target.position) < 0.001f)
                     {
-                        if (RandomResources.randomIron < Capacity)
+                        if (Planet.GetComponent<RandomResources>().randomIron < Capacity)
                         {
-                            PlayerPlanetScript.iron = PlayerPlanetScript.iron + RandomResources.randomIron;
-                            RandomResources.randomIron = RandomResources.randomIron - RandomResources.randomIron;
-                            Capacity -= RandomResources.randomIron;
+                            PlayerPlanetScript.iron = PlayerPlanetScript.iron + Planet.GetComponent<RandomResources>().randomIron;
+                            Planet.GetComponent<RandomResources>().randomIron = Planet.GetComponent<RandomResources>().randomIron - Planet.GetComponent<RandomResources>().randomIron;
+                            Capacity -= Planet.GetComponent<RandomResources>().randomIron;
 
-                            if (Capacity > RandomResources.randomRawFuel)
+                            if (Capacity > Planet.GetComponent<RandomResources>().randomRawFuel)
                             {
-                                PlayerPlanetScript.fuel = PlayerPlanetScript.fuel + RandomResources.randomRawFuel;
-                                RandomResources.randomRawFuel = RandomResources.randomRawFuel - RandomResources.randomRawFuel;
-                                Capacity -= RandomResources.randomRawFuel;
+                                PlayerPlanetScript.fuel = PlayerPlanetScript.fuel + Planet.GetComponent<RandomResources>().randomRawFuel;
+                                Planet.GetComponent<RandomResources>().randomRawFuel = Planet.GetComponent<RandomResources>().randomRawFuel - Planet.GetComponent<RandomResources>().randomRawFuel;
+                                Capacity -= Planet.GetComponent<RandomResources>().randomRawFuel;
 
-                                if (Capacity > RandomResources.randomUranium)
+                                if (Capacity > Planet.GetComponent<RandomResources>().randomUranium)
                                 {
-                                    PlayerPlanetScript.uranium = PlayerPlanetScript.uranium + RandomResources.randomUranium;
-                                    RandomResources.randomUranium = RandomResources.randomUranium - RandomResources.randomUranium;
-                                    Capacity -= RandomResources.randomUranium;
+                                    PlayerPlanetScript.uranium = PlayerPlanetScript.uranium + Planet.GetComponent<RandomResources>().randomUranium;
+                                    Planet.GetComponent<RandomResources>().randomUranium = Planet.GetComponent<RandomResources>().randomUranium - Planet.GetComponent<RandomResources>().randomUranium;
+                                    Capacity -= Planet.GetComponent<RandomResources>().randomUranium;
                                 }
                                 else
                                 {
                                     PlayerPlanetScript.uranium = PlayerPlanetScript.uranium + Capacity;
-                                    RandomResources.randomUranium = RandomResources.randomUranium - Capacity;
+                                    Planet.GetComponent<RandomResources>().randomUranium = Planet.GetComponent<RandomResources>().randomUranium - Capacity;
                                     Capacity -= Capacity;
                                 }
                             }
                             else
                             {
-                                PlayerPlanetScript.iron = PlayerPlanetScript.iron + Capacity;
-                                RandomResources.randomIron = RandomResources.randomIron - Capacity;
+                                PlayerPlanetScript.fuel = PlayerPlanetScript.fuel + Capacity;
+                                Planet.GetComponent<RandomResources>().randomRawFuel = Planet.GetComponent<RandomResources>().randomRawFuel - Capacity;
                                 Capacity -= Capacity;
                             }
                         }
                         else
                         {
                             PlayerPlanetScript.iron = PlayerPlanetScript.iron + 3000;
-                            RandomResources.randomIron = RandomResources.randomIron - 3000;
+                            Planet.GetComponent<RandomResources>().randomIron = Planet.GetComponent<RandomResources>().randomIron - 3000;
                             Capacity -= Capacity;
                         }
 
@@ -196,46 +197,46 @@ public class MoveCargo : MonoBehaviour
 
                     if (Vector3.Distance(transform.position, target.position) < 0.001f)
                     {
-                        if (RandomResources.randomIron < Capacity)
+                        if (PlanetTwo.GetComponent<RandomResources>().randomIron < Capacity)
                         {
-                            PlayerPlanetScript.iron = PlayerPlanetScript.iron + RandomResources.randomIron;
-                            RandomResources.randomIron = RandomResources.randomIron - RandomResources.randomIron;
-                            Capacity -= RandomResources.randomIron;
+                            PlayerPlanetScript.iron = PlayerPlanetScript.iron + PlanetTwo.GetComponent<RandomResources>().randomIron;
+                            PlanetTwo.GetComponent<RandomResources>().randomIron = PlanetTwo.GetComponent<RandomResources>().randomIron - PlanetTwo.GetComponent<RandomResources>().randomIron;
+                            Capacity -= PlanetTwo.GetComponent<RandomResources>().randomIron;
 
-                            if (Capacity > RandomResources.randomRawFuel)
+                            if (Capacity > PlanetTwo.GetComponent<RandomResources>().randomRawFuel)
                             {
-                                PlayerPlanetScript.fuel = PlayerPlanetScript.fuel + RandomResources.randomRawFuel;
-                                RandomResources.randomRawFuel = RandomResources.randomRawFuel - RandomResources.randomRawFuel;
-                                Capacity -= RandomResources.randomRawFuel;
+                                PlayerPlanetScript.fuel = PlayerPlanetScript.fuel + PlanetTwo.GetComponent<RandomResources>().randomRawFuel;
+                                PlanetTwo.GetComponent<RandomResources>().randomRawFuel = PlanetTwo.GetComponent<RandomResources>().randomRawFuel - PlanetTwo.GetComponent<RandomResources>().randomRawFuel;
+                                Capacity -= PlanetTwo.GetComponent<RandomResources>().randomRawFuel;
 
-                                if (Capacity > RandomResources.randomUranium)
+                                if (Capacity > PlanetTwo.GetComponent<RandomResources>().randomUranium)
                                 {
-                                    PlayerPlanetScript.uranium = PlayerPlanetScript.uranium + RandomResources.randomUranium;
-                                    RandomResources.randomUranium = RandomResources.randomUranium - RandomResources.randomUranium;
-                                    Capacity -= RandomResources.randomUranium;
+                                    PlayerPlanetScript.uranium = PlayerPlanetScript.uranium + PlanetTwo.GetComponent<RandomResources>().randomUranium;
+                                    PlanetTwo.GetComponent<RandomResources>().randomUranium = PlanetTwo.GetComponent<RandomResources>().randomUranium - PlanetTwo.GetComponent<RandomResources>().randomUranium;
+                                    Capacity -= PlanetTwo.GetComponent<RandomResources>().randomUranium;
                                 }
                                 else
                                 {
                                     PlayerPlanetScript.uranium = PlayerPlanetScript.uranium + Capacity;
-                                    RandomResources.randomUranium = RandomResources.randomUranium - Capacity;
+                                    PlanetTwo.GetComponent<RandomResources>().randomUranium = PlanetTwo.GetComponent<RandomResources>().randomUranium - Capacity;
                                     Capacity -= Capacity;
                                 }
                             }
                             else
                             {
-                                PlayerPlanetScript.iron = PlayerPlanetScript.iron + Capacity;
-                                RandomResources.randomIron = RandomResources.randomIron - Capacity;
+                                PlayerPlanetScript.fuel = PlayerPlanetScript.fuel + Capacity;
+                                PlanetTwo.GetComponent<RandomResources>().randomRawFuel = PlanetTwo.GetComponent<RandomResources>().randomRawFuel - Capacity;
                                 Capacity -= Capacity;
                             }
                         }
                         else
                         {
                             PlayerPlanetScript.iron = PlayerPlanetScript.iron + 3000;
-                            RandomResources.randomIron = RandomResources.randomIron - 3000;
+                            PlanetTwo.GetComponent<RandomResources>().randomIron = PlanetTwo.GetComponent<RandomResources>().randomIron - 3000;
                             Capacity -= Capacity;
                         }
-                        CargoArrived2 = true;
 
+                        CargoArrived2 = true;
                         Capacity = 3000;
                     }
                 }
@@ -261,42 +262,42 @@ public class MoveCargo : MonoBehaviour
 
                     if (Vector3.Distance(transform.position, target.position) < 0.001f)
                     {
-                        if (RandomResources.randomIron < Capacity)
+                        if (PlanetThree.GetComponent<RandomResources>().randomIron < Capacity)
                         {
-                            PlayerPlanetScript.iron = PlayerPlanetScript.iron + RandomResources.randomIron;
-                            RandomResources.randomIron = RandomResources.randomIron - RandomResources.randomIron;
-                            Capacity -= RandomResources.randomIron;
+                            PlayerPlanetScript.iron = PlayerPlanetScript.iron + PlanetThree.GetComponent<RandomResources>().randomIron;
+                            PlanetThree.GetComponent<RandomResources>().randomIron = PlanetThree.GetComponent<RandomResources>().randomIron - PlanetThree.GetComponent<RandomResources>().randomIron;
+                            Capacity -= PlanetThree.GetComponent<RandomResources>().randomIron;
 
-                            if (Capacity > RandomResources.randomRawFuel)
+                            if (Capacity > PlanetThree.GetComponent<RandomResources>().randomRawFuel)
                             {
-                                PlayerPlanetScript.fuel = PlayerPlanetScript.fuel + RandomResources.randomRawFuel;
-                                RandomResources.randomRawFuel = RandomResources.randomRawFuel - RandomResources.randomRawFuel;
-                                Capacity -= RandomResources.randomRawFuel;
+                                PlayerPlanetScript.fuel = PlayerPlanetScript.fuel + PlanetThree.GetComponent<RandomResources>().randomRawFuel;
+                                PlanetThree.GetComponent<RandomResources>().randomRawFuel = PlanetThree.GetComponent<RandomResources>().randomRawFuel - PlanetThree.GetComponent<RandomResources>().randomRawFuel;
+                                Capacity -= PlanetThree.GetComponent<RandomResources>().randomRawFuel;
 
-                                if (Capacity > RandomResources.randomUranium)
+                                if (Capacity > PlanetThree.GetComponent<RandomResources>().randomUranium)
                                 {
-                                    PlayerPlanetScript.uranium = PlayerPlanetScript.uranium + RandomResources.randomUranium;
-                                    RandomResources.randomUranium = RandomResources.randomUranium - RandomResources.randomUranium;
-                                    Capacity -= RandomResources.randomUranium;
+                                    PlayerPlanetScript.uranium = PlayerPlanetScript.uranium + PlanetThree.GetComponent<RandomResources>().randomUranium;
+                                    PlanetThree.GetComponent<RandomResources>().randomUranium = PlanetThree.GetComponent<RandomResources>().randomUranium - PlanetThree.GetComponent<RandomResources>().randomUranium;
+                                    Capacity -= PlanetThree.GetComponent<RandomResources>().randomUranium;
                                 }
                                 else
                                 {
                                     PlayerPlanetScript.uranium = PlayerPlanetScript.uranium + Capacity;
-                                    RandomResources.randomUranium = RandomResources.randomUranium - Capacity;
+                                    PlanetThree.GetComponent<RandomResources>().randomUranium = PlanetThree.GetComponent<RandomResources>().randomUranium - Capacity;
                                     Capacity -= Capacity;
                                 }
                             }
                             else
                             {
-                                PlayerPlanetScript.iron = PlayerPlanetScript.iron + Capacity;
-                                RandomResources.randomIron = RandomResources.randomIron - Capacity;
+                                PlayerPlanetScript.fuel = PlayerPlanetScript.fuel + Capacity;
+                                PlanetThree.GetComponent<RandomResources>().randomRawFuel = PlanetThree.GetComponent<RandomResources>().randomRawFuel - Capacity;
                                 Capacity -= Capacity;
                             }
                         }
                         else
                         {
                             PlayerPlanetScript.iron = PlayerPlanetScript.iron + 3000;
-                            RandomResources.randomIron = RandomResources.randomIron - 3000;
+                            PlanetThree.GetComponent<RandomResources>().randomIron = PlanetThree.GetComponent<RandomResources>().randomIron - 3000;
                             Capacity -= Capacity;
                         }
 
@@ -327,42 +328,42 @@ public class MoveCargo : MonoBehaviour
 
                     if (Vector3.Distance(transform.position, target.position) < 0.001f)
                     {
-                        if (RandomResources.randomIron < Capacity)
+                        if (PlanetFour.GetComponent<RandomResources>().randomIron < Capacity)
                         {
-                            PlayerPlanetScript.iron = PlayerPlanetScript.iron + RandomResources.randomIron;
-                            RandomResources.randomIron = RandomResources.randomIron - RandomResources.randomIron;
-                            Capacity -= RandomResources.randomIron;
+                            PlayerPlanetScript.iron = PlayerPlanetScript.iron + PlanetFour.GetComponent<RandomResources>().randomIron;
+                            PlanetFour.GetComponent<RandomResources>().randomIron = PlanetFour.GetComponent<RandomResources>().randomIron - PlanetFour.GetComponent<RandomResources>().randomIron;
+                            Capacity -= PlanetFour.GetComponent<RandomResources>().randomIron;
 
-                            if (Capacity > RandomResources.randomRawFuel)
+                            if (Capacity > PlanetFour.GetComponent<RandomResources>().randomRawFuel)
                             {
-                                PlayerPlanetScript.fuel = PlayerPlanetScript.fuel + RandomResources.randomRawFuel;
-                                RandomResources.randomRawFuel = RandomResources.randomRawFuel - RandomResources.randomRawFuel;
-                                Capacity -= RandomResources.randomRawFuel;
+                                PlayerPlanetScript.fuel = PlayerPlanetScript.fuel + PlanetFour.GetComponent<RandomResources>().randomRawFuel;
+                                PlanetFour.GetComponent<RandomResources>().randomRawFuel = PlanetFour.GetComponent<RandomResources>().randomRawFuel - PlanetFour.GetComponent<RandomResources>().randomRawFuel;
+                                Capacity -= PlanetFour.GetComponent<RandomResources>().randomRawFuel;
 
-                                if (Capacity > RandomResources.randomUranium)
+                                if (Capacity > PlanetFour.GetComponent<RandomResources>().randomUranium)
                                 {
-                                    PlayerPlanetScript.uranium = PlayerPlanetScript.uranium + RandomResources.randomUranium;
-                                    RandomResources.randomUranium = RandomResources.randomUranium - RandomResources.randomUranium;
-                                    Capacity -= RandomResources.randomUranium;
+                                    PlayerPlanetScript.uranium = PlayerPlanetScript.uranium + PlanetFour.GetComponent<RandomResources>().randomUranium;
+                                    PlanetFour.GetComponent<RandomResources>().randomUranium = PlanetFour.GetComponent<RandomResources>().randomUranium - PlanetFour.GetComponent<RandomResources>().randomUranium;
+                                    Capacity -= PlanetFour.GetComponent<RandomResources>().randomUranium;
                                 }
                                 else
                                 {
                                     PlayerPlanetScript.uranium = PlayerPlanetScript.uranium + Capacity;
-                                    RandomResources.randomUranium = RandomResources.randomUranium - Capacity;
+                                    PlanetFour.GetComponent<RandomResources>().randomUranium = PlanetFour.GetComponent<RandomResources>().randomUranium - Capacity;
                                     Capacity -= Capacity;
                                 }
                             }
                             else
                             {
-                                PlayerPlanetScript.iron = PlayerPlanetScript.iron + Capacity;
-                                RandomResources.randomRawFuel = RandomResources.randomRawFuel - Capacity;
+                                PlayerPlanetScript.fuel = PlayerPlanetScript.fuel + Capacity;
+                                PlanetFour.GetComponent<RandomResources>().randomRawFuel = PlanetFour.GetComponent<RandomResources>().randomRawFuel - Capacity;
                                 Capacity -= Capacity;
                             }
                         }
                         else
                         {
                             PlayerPlanetScript.iron = PlayerPlanetScript.iron + 3000;
-                            RandomResources.randomIron = RandomResources.randomIron - 3000;
+                            PlanetFour.GetComponent<RandomResources>().randomIron = PlanetFour.GetComponent<RandomResources>().randomIron - 3000;
                             Capacity -= Capacity;
                         }
 
@@ -393,42 +394,42 @@ public class MoveCargo : MonoBehaviour
 
                     if (Vector3.Distance(transform.position, target.position) < 0.001f)
                     {
-                        if (RandomResources.randomIron < Capacity)
+                        if (PlanetFive.GetComponent<RandomResources>().randomIron < Capacity)
                         {
-                            PlayerPlanetScript.iron = PlayerPlanetScript.iron + RandomResources.randomIron;
-                            RandomResources.randomIron = RandomResources.randomIron - RandomResources.randomIron;
-                            Capacity -= RandomResources.randomIron;
+                            PlayerPlanetScript.iron = PlayerPlanetScript.iron + PlanetFive.GetComponent<RandomResources>().randomIron;
+                            PlanetFive.GetComponent<RandomResources>().randomIron = PlanetFive.GetComponent<RandomResources>().randomIron - PlanetFive.GetComponent<RandomResources>().randomIron;
+                            Capacity -= PlanetFive.GetComponent<RandomResources>().randomIron;
 
-                            if (Capacity > RandomResources.randomRawFuel)
+                            if (Capacity > PlanetFive.GetComponent<RandomResources>().randomRawFuel)
                             {
-                                PlayerPlanetScript.fuel = PlayerPlanetScript.fuel + RandomResources.randomRawFuel;
-                                RandomResources.randomRawFuel = RandomResources.randomRawFuel - RandomResources.randomRawFuel;
-                                Capacity -= RandomResources.randomRawFuel;
+                                PlayerPlanetScript.fuel = PlayerPlanetScript.fuel + PlanetFive.GetComponent<RandomResources>().randomRawFuel;
+                                PlanetFive.GetComponent<RandomResources>().randomRawFuel = PlanetFive.GetComponent<RandomResources>().randomRawFuel - PlanetFive.GetComponent<RandomResources>().randomRawFuel;
+                                Capacity -= PlanetFive.GetComponent<RandomResources>().randomRawFuel;
 
-                                if (Capacity > RandomResources.randomUranium)
+                                if (Capacity > PlanetFive.GetComponent<RandomResources>().randomUranium)
                                 {
-                                    PlayerPlanetScript.uranium = PlayerPlanetScript.uranium + RandomResources.randomUranium;
-                                    RandomResources.randomUranium = RandomResources.randomUranium - RandomResources.randomUranium;
-                                    Capacity -= RandomResources.randomUranium;
+                                    PlayerPlanetScript.uranium = PlayerPlanetScript.uranium + PlanetFive.GetComponent<RandomResources>().randomUranium;
+                                    PlanetFive.GetComponent<RandomResources>().randomUranium = PlanetFive.GetComponent<RandomResources>().randomUranium - PlanetFive.GetComponent<RandomResources>().randomUranium;
+                                    Capacity -= PlanetFive.GetComponent<RandomResources>().randomUranium;
                                 }
                                 else
                                 {
                                     PlayerPlanetScript.uranium = PlayerPlanetScript.uranium + Capacity;
-                                    RandomResources.randomUranium = RandomResources.randomUranium - Capacity;
+                                    PlanetFive.GetComponent<RandomResources>().randomUranium = PlanetFive.GetComponent<RandomResources>().randomUranium - Capacity;
                                     Capacity -= Capacity;
                                 }
                             }
                             else
                             {
-                                PlayerPlanetScript.iron = PlayerPlanetScript.iron + Capacity;
-                                RandomResources.randomIron = RandomResources.randomIron - Capacity;
+                                PlayerPlanetScript.fuel = PlayerPlanetScript.fuel + Capacity;
+                                PlanetFive.GetComponent<RandomResources>().randomRawFuel = PlanetFive.GetComponent<RandomResources>().randomRawFuel - Capacity;
                                 Capacity -= Capacity;
                             }
                         }
                         else
                         {
                             PlayerPlanetScript.iron = PlayerPlanetScript.iron + 3000;
-                            RandomResources.randomIron = RandomResources.randomIron - 3000;
+                            PlanetFive.GetComponent<RandomResources>().randomIron = PlanetFive.GetComponent<RandomResources>().randomIron - 3000;
                             Capacity -= Capacity;
                         }
 
@@ -459,42 +460,42 @@ public class MoveCargo : MonoBehaviour
 
                     if (Vector3.Distance(transform.position, target.position) < 0.001f)
                     {
-                        if (RandomResources.randomIron < Capacity)
+                        if (PlanetSix.GetComponent<RandomResources>().randomIron < Capacity)
                         {
-                            PlayerPlanetScript.iron = PlayerPlanetScript.iron + RandomResources.randomIron;
-                            RandomResources.randomIron = RandomResources.randomIron - RandomResources.randomIron;
-                            Capacity -= RandomResources.randomIron;
+                            PlayerPlanetScript.iron = PlayerPlanetScript.iron + PlanetSix.GetComponent<RandomResources>().randomIron;
+                            PlanetSix.GetComponent<RandomResources>().randomIron = PlanetSix.GetComponent<RandomResources>().randomIron - PlanetSix.GetComponent<RandomResources>().randomIron;
+                            Capacity -= PlanetSix.GetComponent<RandomResources>().randomIron;
 
-                            if (Capacity > RandomResources.randomRawFuel)
+                            if (Capacity > PlanetSix.GetComponent<RandomResources>().randomRawFuel)
                             {
-                                PlayerPlanetScript.fuel = PlayerPlanetScript.fuel + RandomResources.randomRawFuel;
-                                RandomResources.randomRawFuel = RandomResources.randomRawFuel - RandomResources.randomRawFuel;
-                                Capacity -= RandomResources.randomRawFuel;
+                                PlayerPlanetScript.fuel = PlayerPlanetScript.fuel + PlanetSix.GetComponent<RandomResources>().randomRawFuel;
+                                PlanetSix.GetComponent<RandomResources>().randomRawFuel = PlanetSix.GetComponent<RandomResources>().randomRawFuel - PlanetSix.GetComponent<RandomResources>().randomRawFuel;
+                                Capacity -= PlanetSix.GetComponent<RandomResources>().randomRawFuel;
 
-                                if (Capacity > RandomResources.randomUranium)
+                                if (Capacity > PlanetSix.GetComponent<RandomResources>().randomUranium)
                                 {
-                                    PlayerPlanetScript.uranium = PlayerPlanetScript.uranium + RandomResources.randomUranium;
-                                    RandomResources.randomUranium = RandomResources.randomUranium - RandomResources.randomUranium;
-                                    Capacity -= RandomResources.randomUranium;
+                                    PlayerPlanetScript.uranium = PlayerPlanetScript.uranium + PlanetSix.GetComponent<RandomResources>().randomUranium;
+                                    PlanetSix.GetComponent<RandomResources>().randomUranium = PlanetSix.GetComponent<RandomResources>().randomUranium - PlanetSix.GetComponent<RandomResources>().randomUranium;
+                                    Capacity -= PlanetSix.GetComponent<RandomResources>().randomUranium;
                                 }
                                 else
                                 {
                                     PlayerPlanetScript.uranium = PlayerPlanetScript.uranium + Capacity;
-                                    RandomResources.randomUranium = RandomResources.randomUranium - Capacity;
+                                    PlanetSix.GetComponent<RandomResources>().randomUranium = PlanetSix.GetComponent<RandomResources>().randomUranium - Capacity;
                                     Capacity -= Capacity;
                                 }
                             }
                             else
                             {
-                                PlayerPlanetScript.iron = PlayerPlanetScript.iron + Capacity;
-                                RandomResources.randomIron = RandomResources.randomIron - Capacity;
+                                PlayerPlanetScript.fuel = PlayerPlanetScript.fuel + Capacity;
+                                PlanetSix.GetComponent<RandomResources>().randomRawFuel = PlanetSix.GetComponent<RandomResources>().randomRawFuel - Capacity;
                                 Capacity -= Capacity;
                             }
                         }
                         else
                         {
                             PlayerPlanetScript.iron = PlayerPlanetScript.iron + 3000;
-                            RandomResources.randomIron = RandomResources.randomIron - 3000;
+                            PlanetSix.GetComponent<RandomResources>().randomIron = PlanetSix.GetComponent<RandomResources>().randomIron - 3000;
                             Capacity -= Capacity;
                         }
 
@@ -525,42 +526,42 @@ public class MoveCargo : MonoBehaviour
 
                     if (Vector3.Distance(transform.position, target.position) < 0.001f)
                     {
-                        if (RandomResources.randomIron < Capacity)
+                        if (PlanetSeven.GetComponent<RandomResources>().randomIron < Capacity)
                         {
-                            PlayerPlanetScript.iron = PlayerPlanetScript.iron + RandomResources.randomIron;
-                            RandomResources.randomIron = RandomResources.randomIron - RandomResources.randomIron;
-                            Capacity -= RandomResources.randomIron;
+                            PlayerPlanetScript.iron = PlayerPlanetScript.iron + PlanetSeven.GetComponent<RandomResources>().randomIron;
+                            PlanetSeven.GetComponent<RandomResources>().randomIron = PlanetSeven.GetComponent<RandomResources>().randomIron - PlanetSeven.GetComponent<RandomResources>().randomIron;
+                            Capacity -= PlanetSeven.GetComponent<RandomResources>().randomIron;
 
-                            if (Capacity > RandomResources.randomRawFuel)
+                            if (Capacity > PlanetSeven.GetComponent<RandomResources>().randomRawFuel)
                             {
-                                PlayerPlanetScript.fuel = PlayerPlanetScript.fuel + RandomResources.randomRawFuel;
-                                RandomResources.randomRawFuel = RandomResources.randomRawFuel - RandomResources.randomRawFuel;
-                                Capacity -= RandomResources.randomRawFuel;
+                                PlayerPlanetScript.fuel = PlayerPlanetScript.fuel + PlanetSeven.GetComponent<RandomResources>().randomRawFuel;
+                                PlanetSeven.GetComponent<RandomResources>().randomRawFuel = PlanetSeven.GetComponent<RandomResources>().randomRawFuel - PlanetSeven.GetComponent<RandomResources>().randomRawFuel;
+                                Capacity -= PlanetSeven.GetComponent<RandomResources>().randomRawFuel;
 
-                                if (Capacity > RandomResources.randomUranium)
+                                if (Capacity > PlanetSeven.GetComponent<RandomResources>().randomUranium)
                                 {
-                                    PlayerPlanetScript.uranium = PlayerPlanetScript.uranium + RandomResources.randomUranium;
-                                    RandomResources.randomUranium = RandomResources.randomUranium - RandomResources.randomUranium;
-                                    Capacity -= RandomResources.randomUranium;
+                                    PlayerPlanetScript.uranium = PlayerPlanetScript.uranium + PlanetSeven.GetComponent<RandomResources>().randomUranium;
+                                    PlanetSeven.GetComponent<RandomResources>().randomUranium = PlanetSeven.GetComponent<RandomResources>().randomUranium - PlanetSeven.GetComponent<RandomResources>().randomUranium;
+                                    Capacity -= PlanetSeven.GetComponent<RandomResources>().randomUranium;
                                 }
                                 else
                                 {
                                     PlayerPlanetScript.uranium = PlayerPlanetScript.uranium + Capacity;
-                                    RandomResources.randomUranium = RandomResources.randomUranium - Capacity;
+                                    PlanetSeven.GetComponent<RandomResources>().randomUranium = PlanetSeven.GetComponent<RandomResources>().randomUranium - Capacity;
                                     Capacity -= Capacity;
                                 }
                             }
                             else
                             {
-                                PlayerPlanetScript.iron = PlayerPlanetScript.iron + Capacity;
-                                RandomResources.randomIron = RandomResources.randomIron - Capacity;
+                                PlayerPlanetScript.fuel = PlayerPlanetScript.fuel + Capacity;
+                                PlanetSeven.GetComponent<RandomResources>().randomRawFuel = PlanetSeven.GetComponent<RandomResources>().randomRawFuel - Capacity;
                                 Capacity -= Capacity;
                             }
                         }
                         else
                         {
                             PlayerPlanetScript.iron = PlayerPlanetScript.iron + 3000;
-                            RandomResources.randomIron = RandomResources.randomIron - 3000;
+                            PlanetSeven.GetComponent<RandomResources>().randomIron = PlanetSeven.GetComponent<RandomResources>().randomIron - 3000;
                             Capacity -= Capacity;
                         }
 

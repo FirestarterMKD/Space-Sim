@@ -4,14 +4,16 @@ using UnityEngine;
 using UnityEngine.UI;
 public class RandomResources : MonoBehaviour
 {
-    private static int randomIron;
-    private static int randomRawFuel;
-    private static int randomUranium;
-    private static int Possibility;
+    public int randomIron;
+    public int randomRawFuel;
+    public int randomUranium;
+    public int Possibility;
 
     public int Iron;
     public int Fuel;
     public int Uranium;
+
+    public GameObject canvas;
 
 
     void Start()
@@ -38,12 +40,15 @@ public class RandomResources : MonoBehaviour
     }
     void Update()
     {
-        Text ironText = GameObject.Find(gameObject.name + "/IronTxt").GetComponent<Text>();
+        Text ironText = canvas.transform.GetChild(0).GetComponent<Text>();
         ironText.text = "Iron: " + randomIron;
-        Text fuelText = GameObject.Find(gameObject.name + "/FuelText").GetComponent<Text>();
-        fuelText.text = "Raw Fuel: " + randomRawFuel;
-        Text UraniumText = GameObject.Find(gameObject.name + "/UraniumText").GetComponent<Text>();
-        UraniumText.text = "Uranium: " + randomUranium;
+
+        Text FuelText = canvas.transform.GetChild(1).GetComponent<Text>();
+        FuelText.text = "Uranium: " + randomRawFuel;
+
+        Text uraniumText = canvas.transform.GetChild(2).GetComponent<Text>();
+        uraniumText.text = "Uranium: " + randomUranium;
+
 
     }
 }

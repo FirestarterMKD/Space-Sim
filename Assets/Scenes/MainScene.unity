@@ -4541,7 +4541,7 @@ GameObject:
   - component: {fileID: 457352722}
   m_Layer: 0
   m_Name: My Planet
-  m_TagString: Untagged
+  m_TagString: PlanetOne
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5033,14 +5033,16 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 526509901}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2bf2fc15f7ebc4b4ca5cfccfc2155dcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  randomIron: 0
   Iron: 0
   Fuel: 0
   Uranium: 0
+  canvas: {fileID: 0}
 --- !u!114 &526509904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5503,6 +5505,7 @@ GameObject:
   - component: {fileID: 551343609}
   - component: {fileID: 551343611}
   - component: {fileID: 551343610}
+  - component: {fileID: 551343612}
   m_Layer: 0
   m_Name: ColliderPlanetFour
   m_TagString: Untagged
@@ -5545,6 +5548,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 551343608}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &551343612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 551343608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bf2fc15f7ebc4b4ca5cfccfc2155dcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  randomIron: 0
+  Iron: 0
+  Fuel: 0
+  Uranium: 0
+  canvas: {fileID: 2019340249}
 --- !u!1 &571205985
 GameObject:
   m_ObjectHideFlags: 0
@@ -9157,6 +9177,7 @@ GameObject:
   - component: {fileID: 885384010}
   - component: {fileID: 885384012}
   - component: {fileID: 885384011}
+  - component: {fileID: 885384013}
   m_Layer: 0
   m_Name: ColliderPlanetFive
   m_TagString: Untagged
@@ -9199,6 +9220,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 885384009}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &885384013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 885384009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bf2fc15f7ebc4b4ca5cfccfc2155dcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  randomIron: 0
+  Iron: 0
+  Fuel: 0
+  Uranium: 0
+  canvas: {fileID: 526509901}
 --- !u!1 &903712213
 GameObject:
   m_ObjectHideFlags: 0
@@ -13243,14 +13281,16 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1286292856}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2bf2fc15f7ebc4b4ca5cfccfc2155dcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  randomIron: 0
   Iron: 0
   Fuel: 0
   Uranium: 0
+  canvas: {fileID: 0}
 --- !u!114 &1286292858
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16644,14 +16684,16 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1580554921}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2bf2fc15f7ebc4b4ca5cfccfc2155dcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  randomIron: 0
   Iron: 0
   Fuel: 0
   Uranium: 0
+  canvas: {fileID: 0}
 --- !u!114 &1580554924
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16903,6 +16945,7 @@ GameObject:
   - component: {fileID: 1595513790}
   - component: {fileID: 1595513792}
   - component: {fileID: 1595513791}
+  - component: {fileID: 1595513793}
   m_Layer: 0
   m_Name: ColliderPlanetOne
   m_TagString: Untagged
@@ -16945,6 +16988,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1595513789}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1595513793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1595513789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bf2fc15f7ebc4b4ca5cfccfc2155dcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  randomIron: 0
+  Iron: 0
+  Fuel: 0
+  Uranium: 0
+  canvas: {fileID: 1286292856}
 --- !u!114 &1610952630 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 115758282479212373, guid: 37d6146dbc0b3c548869facde77fef67,
@@ -18480,7 +18540,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 150
-  Planet: {fileID: 1286292856}
+  Planet: {fileID: 1595513789}
+  PlanetTwo: {fileID: 2032620564}
+  PlanetThree: {fileID: 1957885727}
+  PlanetFour: {fileID: 551343608}
+  PlanetFive: {fileID: 885384009}
+  PlanetSix: {fileID: 1919968126}
+  PlanetSeven: {fileID: 0}
+  PlanetEight: {fileID: 0}
+  PlanetNine: {fileID: 0}
+  PlanetTen: {fileID: 0}
   MyPlanet: {fileID: 1135995045}
   targetHome: {fileID: 1076155004}
   CargoArrived: 0
@@ -19803,14 +19872,16 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1817569387}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2bf2fc15f7ebc4b4ca5cfccfc2155dcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  randomIron: 0
   Iron: 0
   Fuel: 0
   Uranium: 0
+  canvas: {fileID: 0}
 --- !u!4 &1818220074 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6703095122648600375, guid: 6f570b1e22c5a0946b73698f2c7e945f,
@@ -20125,14 +20196,16 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1841503770}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2bf2fc15f7ebc4b4ca5cfccfc2155dcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  randomIron: 0
   Iron: 0
   Fuel: 0
   Uranium: 0
+  canvas: {fileID: 0}
 --- !u!114 &1841503773
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20758,6 +20831,7 @@ GameObject:
   - component: {fileID: 1919968127}
   - component: {fileID: 1919968129}
   - component: {fileID: 1919968128}
+  - component: {fileID: 1919968130}
   m_Layer: 0
   m_Name: ColliderPlanetSix
   m_TagString: Untagged
@@ -20800,6 +20874,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1919968126}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1919968130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1919968126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bf2fc15f7ebc4b4ca5cfccfc2155dcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  randomIron: 0
+  Iron: 0
+  Fuel: 0
+  Uranium: 0
+  canvas: {fileID: 1580554921}
 --- !u!1 &1920791631
 GameObject:
   m_ObjectHideFlags: 0
@@ -21406,6 +21497,7 @@ GameObject:
   - component: {fileID: 1957885728}
   - component: {fileID: 1957885730}
   - component: {fileID: 1957885729}
+  - component: {fileID: 1957885731}
   m_Layer: 0
   m_Name: ColliderPlanetThree
   m_TagString: Untagged
@@ -21448,6 +21540,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1957885727}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1957885731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1957885727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bf2fc15f7ebc4b4ca5cfccfc2155dcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  randomIron: 0
+  Iron: 0
+  Fuel: 0
+  Uranium: 0
+  canvas: {fileID: 1841503770}
 --- !u!1 &1967836099
 GameObject:
   m_ObjectHideFlags: 0
@@ -22354,14 +22463,16 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2019340249}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2bf2fc15f7ebc4b4ca5cfccfc2155dcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  randomIron: 0
   Iron: 0
   Fuel: 0
   Uranium: 0
+  canvas: {fileID: 0}
 --- !u!114 &2019340252
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22433,6 +22544,7 @@ GameObject:
   - component: {fileID: 2032620565}
   - component: {fileID: 2032620567}
   - component: {fileID: 2032620566}
+  - component: {fileID: 2032620568}
   m_Layer: 0
   m_Name: ColliderPlanetTwo
   m_TagString: Untagged
@@ -22475,6 +22587,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2032620564}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2032620568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2032620564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bf2fc15f7ebc4b4ca5cfccfc2155dcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  randomIron: 0
+  Iron: 0
+  Fuel: 0
+  Uranium: 0
+  canvas: {fileID: 1817569387}
 --- !u!1 &2037549237
 GameObject:
   m_ObjectHideFlags: 0
